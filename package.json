@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "client:dev": "scripty",
     "test": "echo \"Error: no test specified\" && exit 1",
     "test:ui": "backstop init",
     "test:uidiff": "backstop test"
@@ -13,5 +14,8 @@
   "dependencies": {
     "backstopjs": "^6.3.25",
     "react": "^19.1.1"
+  },
+  "devDependencies": {
+    "scripty": "^3.0.0"
   }
 }
