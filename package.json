@@ -2,9 +2,11 @@
   "name": "webpack-ai-spa",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "webpack.config.js",
   "scripts": {
     "client:dev": "scripty",
+    "client:server": "webpack server --model development",
+    "client:prod": "webpack server --model production",
     "test": "echo \"Error: no test specified\" && exit 1",
     "test:ui": "backstop init",
     "test:uidiff": "backstop test"
@@ -16,6 +18,10 @@
     "react": "^19.1.1"
   },
   "devDependencies": {
-    "scripty": "^3.0.0"
+    "scripty": "^3.0.0",
+    "@swc/core": "^1.13.5",
+    "swc-loader": "^0.2.6",
+    "webpack": "^5.101.3",
+    "webpack-cli": "^6.0.1"
   }
 }
