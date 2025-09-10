@@ -9,18 +9,34 @@
     "client:prod": "webpack server --model production",
     "test": "echo \"Error: no test specified\" && exit 1",
     "test:ui": "backstop init",
-    "test:uidiff": "backstop test"
+    "test:uidiff": "backstop test",
+    "lint:fix": "tsc --noEmit && eslint ./src --ext .ts,.tsx,.js --fix",
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.43.0",
+    "@typescript-eslint/parser": "^7.0.0",
     "backstopjs": "^6.3.25",
+    "eslint-config-airbnb-typescript": "^18.0.0",
     "react": "^19.1.1"
   },
   "devDependencies": {
-    "scripty": "^3.0.0",
     "@swc/core": "^1.13.5",
+    "@swc/jest": "^0.2.39",
+    "eslint": "8.57.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-jest": "^29.0.1",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "prettier": "^3.6.2",
+    "scripty": "^3.0.0",
     "swc-loader": "^0.2.6",
+    "typescript": "5.5.4",
+    "jest": "^30.1.3",
     "webpack": "^5.101.3",
     "webpack-cli": "^6.0.1"
   }
