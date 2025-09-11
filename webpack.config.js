@@ -4,9 +4,11 @@ const { resolve } = require('path');
 const _mode = argv.mode || 'development';
 const _mergeConfig = require(`./config/webpack.${_mode}.js`);
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+// ---------------------- bar 进度条插件 多选一 --------------
 // const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 // const WebpackBar = require('webpackbar');
 const { ThemedProgressPlugin } = require('themed-progress-plugin');
+// ---------------------- 进度条插件 --------------
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const _modeflag = _mode === 'production' ? true : false;
 const webpackBaseConfig = {

@@ -1,6 +1,8 @@
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import Index from './components/Test';
+import "./index.css"
+import "./wdyr.tsx"
 
 const App = () => {
     return (
