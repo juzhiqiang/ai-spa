@@ -4,6 +4,7 @@ const FriendlyErrorsWebpackPlugin = require('@soda/friendly-errors-webpack-plugi
 const notifier = require('node-notifier');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const port = 3000;
+
 module.exports = {
   devServer: {
     //单页的spa应用 使用起来
@@ -52,6 +53,6 @@ module.exports = {
       },
       clearConsole: true,
     }),
-    // new BundleAnalyzerPlugin(),
+    new BundleAnalyzerPlugin(),
   ],
 };

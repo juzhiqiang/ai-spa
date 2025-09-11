@@ -5,11 +5,12 @@ const Index = () => {
     const [text, setText] = useImmer({ data: '123', info: '123' });
 
     useEffect(() => {
-        setText(draft => {
-            draft.data = '456';
-        });
-    });
 
+        setText(draft => {
+            draft.data = '123';
+        });
+    }, [setText]);
+    
     return <div>{text.data}</div>;
 };
 
