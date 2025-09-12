@@ -1,17 +1,9 @@
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
-import Index from './components/Test';
 import "./index.css"
 import "./wdyr.tsx"
+import App from './pages/App';
 
-const App = () => {
-    return (
-        <div>
-            Hello,
-            <Index />
-        </div>
-    );
-};
 
 // useEffect
 // useCallback
