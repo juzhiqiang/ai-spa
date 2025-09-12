@@ -10,6 +10,7 @@
         "test:ui": "backstop init",
         "test:uidiff": "backstop test",
         "test:e2e": "cypress open",
+        "test:unit": "scripty",
         "test": "jest --collectCoverage --reporters default jest-stare",
         "lint:fix": "tsc --noEmit && eslint ./src --ext .ts,.tsx,.js --fix",
         "lint": "eslint . --ext .ts,.tsx,.js,.jsx",

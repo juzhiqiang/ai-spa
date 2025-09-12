@@ -1,8 +1,8 @@
 {
   "numFailedTestSuites": 1,
-  "numFailedTests": 20,
+  "numFailedTests": 6,
   "numPassedTestSuites": 1,
-  "numPassedTests": 1,
+  "numPassedTests": 15,
   "numPendingTestSuites": 0,
   "numPendingTests": 0,
   "numRuntimeErrorTestSuites": 0,
@@ -26,27 +26,27 @@
     "unmatched": 0,
     "updated": 0
   },
-  "startTime": 1757668604539,
+  "startTime": 1757669083836,
   "success": false,
   "testResults": [
     {
       "leaks": false,
-      "numFailingTests": 20,
-      "numPassingTests": 0,
+      "numFailingTests": 6,
+      "numPassingTests": 14,
       "numPendingTests": 0,
       "numTodoTests": 0,
       "openHandles": [],
       "perfStats": {
-        "end": 1757668604739,
-        "loadTestEnvironmentEnd": 1757668604592,
-        "loadTestEnvironmentStart": 1757668604568,
-        "runtime": 147,
-        "setupAfterEnvEnd": 1757668604669,
-        "setupAfterEnvStart": 1757668604667,
-        "setupFilesEnd": 1757668604592,
-        "setupFilesStart": 1757668604592,
+        "end": 1757669084572,
+        "loadTestEnvironmentEnd": 1757669083888,
+        "loadTestEnvironmentStart": 1757669083864,
+        "runtime": 683,
+        "setupAfterEnvEnd": 1757669083959,
+        "setupAfterEnvStart": 1757669083958,
+        "setupFilesEnd": 1757669083889,
+        "setupFilesStart": 1757669083889,
         "slow": false,
-        "start": 1757668604592
+        "start": 1757669083889
       },
       "skipped": false,
       "snapshot": {
@@ -65,27 +65,17 @@
             "formatWalletAddress 函数测试",
             "基本功能测试"
           ],
-          "duration": 1,
+          "duration": 569,
           "failing": false,
-          "failureDetails": [
-            {
-              "code": "MODULE_NOT_FOUND",
-              "hint": "",
-              "siblingWithSimilarExtensionFound": false,
-              "moduleName": "@/utils/index.ts",
-              "_originalMessage": "Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'"
-            }
-          ],
-          "failureMessages": [
-            "Error: Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'\n    at Resolver._throwModNotFoundError (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:863:11)\n    at Resolver.resolveModule (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:810:10)\n    at Resolver._getVirtualMockPath (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:1004:84)\n    at Resolver._getAbsolutePath (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:984:98)\n    at Resolver.getModuleID (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:949:31)\n    at Runtime._shouldMockCjs (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runtime/build/index.js:1486:37)\n    at Runtime.requireModuleOrMock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runtime/build/index.js:961:16)\n    at _indexts (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/tests/unit/formatwallet.spec.ts:1:40)\n    at Object.<anonymous> (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/tests/unit/formatwallet.spec.ts:10:12)\n    at Promise.finally.completed (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1556:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1496:10)\n    at _callCircusTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1006:40)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at _runTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:946:3)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:839:13)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at run (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:757:3)\n    at runAndTransformResultsToJestFormat (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1917:21)\n    at jestAdapter (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/runner.js:101:19)\n    at runTestInternal (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runner/build/index.js:275:16)\n    at runTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runner/build/index.js:343:7)"
-          ],
+          "failureDetails": [],
+          "failureMessages": [],
           "fullName": "formatWalletAddress 函数测试 基本功能测试 应该正确格式化标准的以太坊地址（带0x前缀）",
           "invocations": 1,
           "location": null,
-          "numPassingAsserts": 0,
+          "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757668604680,
-          "status": "failed",
+          "startAt": 1757669083968,
+          "status": "passed",
           "title": "应该正确格式化标准的以太坊地址（带0x前缀）"
         },
         {
@@ -93,27 +83,17 @@
             "formatWalletAddress 函数测试",
             "基本功能测试"
           ],
-          "duration": 0,
+          "duration": 1,
           "failing": false,
-          "failureDetails": [
-            {
-              "code": "MODULE_NOT_FOUND",
-              "hint": "",
-              "siblingWithSimilarExtensionFound": false,
-              "moduleName": "@/utils/index.ts",
-              "_originalMessage": "Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'"
-            }
-          ],
-          "failureMessages": [
-            "Error: Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'\n    at Resolver._throwModNotFoundError (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:863:11)\n    at Resolver.resolveModule (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:810:10)\n    at Resolver._getVirtualMockPath (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:1004:84)\n    at Resolver._getAbsolutePath (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:984:98)\n    at Resolver.getModuleID (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:949:31)\n    at Runtime._shouldMockCjs (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runtime/build/index.js:1486:37)\n    at Runtime.requireModuleOrMock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runtime/build/index.js:961:16)\n    at _indexts (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/tests/unit/formatwallet.spec.ts:1:40)\n    at Object.<anonymous> (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/tests/unit/formatwallet.spec.ts:13:27)\n    at Promise.finally.completed (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1556:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1496:10)\n    at _callCircusTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1006:40)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at _runTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:946:3)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:839:13)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at run (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:757:3)\n    at runAndTransformResultsToJestFormat (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1917:21)\n    at jestAdapter (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/runner.js:101:19)\n    at runTestInternal (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runner/build/index.js:275:16)\n    at runTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runner/build/index.js:343:7)"
-          ],
+          "failureDetails": [],
+          "failureMessages": [],
           "fullName": "formatWalletAddress 函数测试 基本功能测试 应该正确格式化不带0x前缀的地址",
           "invocations": 1,
           "location": null,
-          "numPassingAsserts": 0,
+          "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757668604687,
-          "status": "failed",
+          "startAt": 1757669084537,
+          "status": "passed",
           "title": "应该正确格式化不带0x前缀的地址"
         },
         {
@@ -123,25 +103,15 @@
           ],
           "duration": 0,
           "failing": false,
-          "failureDetails": [
-            {
-              "code": "MODULE_NOT_FOUND",
-              "hint": "",
-              "siblingWithSimilarExtensionFound": false,
-              "moduleName": "@/utils/index.ts",
-              "_originalMessage": "Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'"
-            }
-          ],
-          "failureMessages": [
-            "Error: Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'\n    at Resolver._throwModNotFoundError (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:863:11)\n    at Resolver.resolveModule (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:810:10)\n    at Resolver._getVirtualMockPath (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:1004:84)\n    at Resolver._getAbsolutePath (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:984:98)\n    at Resolver.getModuleID (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:949:31)\n    at Runtime._shouldMockCjs (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runtime/build/index.js:1486:37)\n    at Runtime.requireModuleOrMock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runtime/build/index.js:961:16)\n    at _indexts (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/tests/unit/formatwallet.spec.ts:1:40)\n    at Object.test (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/tests/unit/formatwallet.spec.ts:21:5)\n    at Promise.finally.completed (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1556:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1496:10)\n    at _callCircusTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1006:40)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at _runTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:946:3)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:839:13)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at run (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:757:3)\n    at runAndTransformResultsToJestFormat (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1917:21)\n    at jestAdapter (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/runner.js:101:19)\n    at runTestInternal (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runner/build/index.js:275:16)\n    at runTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runner/build/index.js:343:7)"
-          ],
+          "failureDetails": [],
+          "failureMessages": [],
           "fullName": "formatWalletAddress 函数测试 基本功能测试 应该使用默认参数（startLength=6, endLength=4）",
           "invocations": 1,
           "location": null,
-          "numPassingAsserts": 0,
+          "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757668604688,
-          "status": "failed",
+          "startAt": 1757669084538,
+          "status": "passed",
           "title": "应该使用默认参数（startLength=6, endLength=4）"
         },
         {
@@ -149,26 +119,28 @@
             "formatWalletAddress 函数测试",
             "自定义参数测试"
           ],
-          "duration": 1,
+          "duration": 2,
           "failing": false,
           "failureDetails": [
             {
-              "code": "MODULE_NOT_FOUND",
-              "hint": "",
-              "siblingWithSimilarExtensionFound": false,
-              "moduleName": "@/utils/index.ts",
-              "_originalMessage": "Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'"
+              "matcherResult": {
+                "actual": "0x742d35Cc...9b8c5e",
+                "expected": "0x742d35Cc...b8c5e",
+                "message": "\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"0x742d35Cc...b8c5e\"\u001b[39m\nReceived: \u001b[31m\"0x742d35Cc...\u001b[7m9\u001b[27mb8c5e\"\u001b[39m",
+                "name": "toBe",
+                "pass": false
+              }
             }
           ],
           "failureMessages": [
-            "Error: Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'\n    at Resolver._throwModNotFoundError (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:863:11)\n    at Resolver.resolveModule (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:810:10)\n    at Resolver._getVirtualMockPath (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:1004:84)\n    at Resolver._getAbsolutePath (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:984:98)\n    at Resolver.getModuleID (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:949:31)\n    at Runtime._shouldMockCjs (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runtime/build/index.js:1486:37)\n    at Runtime.requireModuleOrMock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runtime/build/index.js:961:16)\n    at _indexts (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/tests/unit/formatwallet.spec.ts:1:40)\n    at Object.describe (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/tests/unit/formatwallet.spec.ts:27:3)\n    at Promise.finally.completed (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1556:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1496:10)\n    at _callCircusTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1006:40)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at _runTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:946:3)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:839:13)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at run (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:757:3)\n    at runAndTransformResultsToJestFormat (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1917:21)\n    at jestAdapter (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/runner.js:101:19)\n    at runTestInternal (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runner/build/index.js:275:16)\n    at runTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runner/build/index.js:343:7)"
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"0x742d35Cc...b8c5e\"\u001b[39m\nReceived: \u001b[31m\"0x742d35Cc...\u001b[7m9\u001b[27mb8c5e\"\u001b[39m\n    at Object.formatWalletAddress (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/tests/unit/formatwallet.spec.ts:28:22)\n    at Promise.finally.completed (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1556:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1496:10)\n    at _callCircusTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1006:40)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at _runTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:946:3)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:839:13)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at run (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:757:3)\n    at runAndTransformResultsToJestFormat (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1917:21)\n    at jestAdapter (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/runner.js:101:19)\n    at runTestInternal (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runner/build/index.js:275:16)\n    at runTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runner/build/index.js:343:7)"
           ],
           "fullName": "formatWalletAddress 函数测试 自定义参数测试 应该支持同时自定义起始和结尾长度",
           "invocations": 1,
           "location": null,
           "numPassingAsserts": 0,
           "retryReasons": [],
-          "startAt": 1757668604688,
+          "startAt": 1757669084538,
           "status": "failed",
           "title": "应该支持同时自定义起始和结尾长度"
         },
@@ -177,27 +149,17 @@
             "formatWalletAddress 函数测试",
             "自定义参数测试"
           ],
-          "duration": 0,
+          "duration": 1,
           "failing": false,
-          "failureDetails": [
-            {
-              "code": "MODULE_NOT_FOUND",
-              "hint": "",
-              "siblingWithSimilarExtensionFound": false,
-              "moduleName": "@/utils/index.ts",
-              "_originalMessage": "Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'"
-            }
-          ],
-          "failureMessages": [
-            "Error: Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'\n    at Resolver._throwModNotFoundError (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:863:11)\n    at Resolver.resolveModule (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:810:10)\n    at Resolver._getVirtualMockPath (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:1004:84)\n    at Resolver._getAbsolutePath (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:984:98)\n    at Resolver.getModuleID (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:949:31)\n    at Runtime._shouldMockCjs (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runtime/build/index.js:1486:37)\n    at Runtime.requireModuleOrMock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runtime/build/index.js:961:16)\n    at _indexts (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/tests/unit/formatwallet.spec.ts:1:40)\n    at Object.<anonymous> (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/tests/unit/formatwallet.spec.ts:30:27)\n    at Promise.finally.completed (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1556:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1496:10)\n    at _callCircusTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1006:40)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at _runTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:946:3)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:839:13)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at run (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:757:3)\n    at runAndTransformResultsToJestFormat (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1917:21)\n    at jestAdapter (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/runner.js:101:19)\n    at runTestInternal (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runner/build/index.js:275:16)\n    at runTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runner/build/index.js:343:7)"
-          ],
+          "failureDetails": [],
+          "failureMessages": [],
           "fullName": "formatWalletAddress 函数测试 自定义参数测试 应该支持较大的起始和结尾长度",
           "invocations": 1,
           "location": null,
-          "numPassingAsserts": 0,
+          "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757668604689,
-          "status": "failed",
+          "startAt": 1757669084544,
+          "status": "passed",
           "title": "应该支持较大的起始和结尾长度"
         },
         {
@@ -207,25 +169,15 @@
           ],
           "duration": 0,
           "failing": false,
-          "failureDetails": [
-            {
-              "code": "MODULE_NOT_FOUND",
-              "hint": "",
-              "siblingWithSimilarExtensionFound": false,
-              "moduleName": "@/utils/index.ts",
-              "_originalMessage": "Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'"
-            }
-          ],
-          "failureMessages": [
-            "Error: Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'\n    at Resolver._throwModNotFoundError (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:863:11)\n    at Resolver.resolveModule (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:810:10)\n    at Resolver._getVirtualMockPath (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:1004:84)\n    at Resolver._getAbsolutePath (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:984:98)\n    at Resolver.getModuleID (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:949:31)\n    at Runtime._shouldMockCjs (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runtime/build/index.js:1486:37)\n    at Runtime.requireModuleOrMock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runtime/build/index.js:961:16)\n    at _indexts (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/tests/unit/formatwallet.spec.ts:1:40)\n    at Object.describe (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/tests/unit/formatwallet.spec.ts:39:3)\n    at Promise.finally.completed (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1556:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1496:10)\n    at _callCircusTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1006:40)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at _runTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:946:3)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:839:13)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at run (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:757:3)\n    at runAndTransformResultsToJestFormat (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1917:21)\n    at jestAdapter (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/runner.js:101:19)\n    at runTestInternal (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runner/build/index.js:275:16)\n    at runTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runner/build/index.js:343:7)"
-          ],
+          "failureDetails": [],
+          "failureMessages": [],
           "fullName": "formatWalletAddress 函数测试 边界情况测试 空字符串应该返回空字符串",
           "invocations": 1,
           "location": null,
-          "numPassingAsserts": 0,
+          "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757668604690,
-          "status": "failed",
+          "startAt": 1757669084545,
+          "status": "passed",
           "title": "空字符串应该返回空字符串"
         },
         {
@@ -235,25 +187,15 @@
           ],
           "duration": 1,
           "failing": false,
-          "failureDetails": [
-            {
-              "code": "MODULE_NOT_FOUND",
-              "hint": "",
-              "siblingWithSimilarExtensionFound": false,
-              "moduleName": "@/utils/index.ts",
-              "_originalMessage": "Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'"
-            }
-          ],
-          "failureMessages": [
-            "Error: Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'\n    at Resolver._throwModNotFoundError (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:863:11)\n    at Resolver.resolveModule (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:810:10)\n    at Resolver._getVirtualMockPath (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:1004:84)\n    at Resolver._getAbsolutePath (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:984:98)\n    at Resolver.getModuleID (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:949:31)\n    at Runtime._shouldMockCjs (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runtime/build/index.js:1486:37)\n    at Runtime.requireModuleOrMock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runtime/build/index.js:961:16)\n    at _indexts (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/tests/unit/formatwallet.spec.ts:1:40)\n    at Object.result (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/tests/unit/formatwallet.spec.ts:42:14)\n    at Promise.finally.completed (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1556:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1496:10)\n    at _callCircusTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1006:40)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at _runTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:946:3)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:839:13)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at run (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:757:3)\n    at runAndTransformResultsToJestFormat (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1917:21)\n    at jestAdapter (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/runner.js:101:19)\n    at runTestInternal (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runner/build/index.js:275:16)\n    at runTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runner/build/index.js:343:7)"
-          ],
+          "failureDetails": [],
+          "failureMessages": [],
           "fullName": "formatWalletAddress 函数测试 边界情况测试 null 或 undefined 应该返回空字符串",
           "invocations": 1,
           "location": null,
-          "numPassingAsserts": 0,
+          "numPassingAsserts": 2,
           "retryReasons": [],
-          "startAt": 1757668604690,
-          "status": "failed",
+          "startAt": 1757669084545,
+          "status": "passed",
           "title": "null 或 undefined 应该返回空字符串"
         },
         {
@@ -265,22 +207,24 @@
           "failing": false,
           "failureDetails": [
             {
-              "code": "MODULE_NOT_FOUND",
-              "hint": "",
-              "siblingWithSimilarExtensionFound": false,
-              "moduleName": "@/utils/index.ts",
-              "_originalMessage": "Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'"
+              "matcherResult": {
+                "actual": "0x123456...7890",
+                "expected": "0x1234567890",
+                "message": "\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"0x1234567890\"\u001b[39m\nReceived: \u001b[31m\"0x123456\u001b[7m...\u001b[27m7890\"\u001b[39m",
+                "name": "toBe",
+                "pass": false
+              }
             }
           ],
           "failureMessages": [
-            "Error: Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'\n    at Resolver._throwModNotFoundError (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:863:11)\n    at Resolver.resolveModule (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:810:10)\n    at Resolver._getVirtualMockPath (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:1004:84)\n    at Resolver._getAbsolutePath (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:984:98)\n    at Resolver.getModuleID (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:949:31)\n    at Runtime._shouldMockCjs (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runtime/build/index.js:1486:37)\n    at Runtime.requireModuleOrMock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runtime/build/index.js:961:16)\n    at _indexts (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/tests/unit/formatwallet.spec.ts:1:40)\n    at Object.test (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/tests/unit/formatwallet.spec.ts:50:5)\n    at Promise.finally.completed (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1556:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1496:10)\n    at _callCircusTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1006:40)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at _runTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:946:3)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:839:13)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at run (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:757:3)\n    at runAndTransformResultsToJestFormat (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1917:21)\n    at jestAdapter (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/runner.js:101:19)\n    at runTestInternal (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runner/build/index.js:275:16)\n    at runTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runner/build/index.js:343:7)"
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"0x1234567890\"\u001b[39m\nReceived: \u001b[31m\"0x123456\u001b[7m...\u001b[27m7890\"\u001b[39m\n    at Object.veryShortAddress (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/tests/unit/formatwallet.spec.ts:52:58)\n    at Promise.finally.completed (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1556:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1496:10)\n    at _callCircusTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1006:40)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at _runTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:946:3)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:839:13)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at run (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:757:3)\n    at runAndTransformResultsToJestFormat (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1917:21)\n    at jestAdapter (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/runner.js:101:19)\n    at runTestInternal (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runner/build/index.js:275:16)\n    at runTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runner/build/index.js:343:7)"
           ],
           "fullName": "formatWalletAddress 函数测试 边界情况测试 地址长度小于等于 startLength + endLength 时应该返回原地址",
           "invocations": 1,
           "location": null,
-          "numPassingAsserts": 0,
+          "numPassingAsserts": 2,
           "retryReasons": [],
-          "startAt": 1757668604691,
+          "startAt": 1757669084546,
           "status": "failed",
           "title": "地址长度小于等于 startLength + endLength 时应该返回原地址"
         },
@@ -291,25 +235,15 @@
           ],
           "duration": 0,
           "failing": false,
-          "failureDetails": [
-            {
-              "code": "MODULE_NOT_FOUND",
-              "hint": "",
-              "siblingWithSimilarExtensionFound": false,
-              "moduleName": "@/utils/index.ts",
-              "_originalMessage": "Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'"
-            }
-          ],
-          "failureMessages": [
-            "Error: Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'\n    at Resolver._throwModNotFoundError (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:863:11)\n    at Resolver.resolveModule (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:810:10)\n    at Resolver._getVirtualMockPath (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:1004:84)\n    at Resolver._getAbsolutePath (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:984:98)\n    at Resolver.getModuleID (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:949:31)\n    at Runtime._shouldMockCjs (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runtime/build/index.js:1486:37)\n    at Runtime.requireModuleOrMock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runtime/build/index.js:961:16)\n    at _indexts (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/tests/unit/formatwallet.spec.ts:1:40)\n    at Object.<anonymous> (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/tests/unit/formatwallet.spec.ts:57:10)\n    at Promise.finally.completed (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1556:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1496:10)\n    at _callCircusTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1006:40)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at _runTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:946:3)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:839:13)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at run (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:757:3)\n    at runAndTransformResultsToJestFormat (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1917:21)\n    at jestAdapter (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/runner.js:101:19)\n    at runTestInternal (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runner/build/index.js:275:16)\n    at runTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runner/build/index.js:343:7)"
-          ],
+          "failureDetails": [],
+          "failureMessages": [],
           "fullName": "formatWalletAddress 函数测试 边界情况测试 刚好超过最小长度的地址应该被格式化",
           "invocations": 1,
           "location": null,
-          "numPassingAsserts": 0,
+          "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757668604692,
-          "status": "failed",
+          "startAt": 1757669084547,
+          "status": "passed",
           "title": "刚好超过最小长度的地址应该被格式化"
         },
         {
@@ -317,27 +251,17 @@
             "formatWalletAddress 函数测试",
             "前缀处理测试"
           ],
-          "duration": 1,
+          "duration": 0,
           "failing": false,
-          "failureDetails": [
-            {
-              "code": "MODULE_NOT_FOUND",
-              "hint": "",
-              "siblingWithSimilarExtensionFound": false,
-              "moduleName": "@/utils/index.ts",
-              "_originalMessage": "Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'"
-            }
-          ],
-          "failureMessages": [
-            "Error: Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'\n    at Resolver._throwModNotFoundError (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:863:11)\n    at Resolver.resolveModule (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:810:10)\n    at Resolver._getVirtualMockPath (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:1004:84)\n    at Resolver._getAbsolutePath (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:984:98)\n    at Resolver.getModuleID (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:949:31)\n    at Runtime._shouldMockCjs (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runtime/build/index.js:1486:37)\n    at Runtime.requireModuleOrMock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runtime/build/index.js:961:16)\n    at _indexts (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/tests/unit/formatwallet.spec.ts:1:40)\n    at Object.withPrefix (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/tests/unit/formatwallet.spec.ts:66:13)\n    at Promise.finally.completed (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1556:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1496:10)\n    at _callCircusTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1006:40)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at _runTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:946:3)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:839:13)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at run (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:757:3)\n    at runAndTransformResultsToJestFormat (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1917:21)\n    at jestAdapter (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/runner.js:101:19)\n    at runTestInternal (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runner/build/index.js:275:16)\n    at runTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runner/build/index.js:343:7)"
-          ],
+          "failureDetails": [],
+          "failureMessages": [],
           "fullName": "formatWalletAddress 函数测试 前缀处理测试 应该保留原有的0x前缀",
           "invocations": 1,
           "location": null,
-          "numPassingAsserts": 0,
+          "numPassingAsserts": 2,
           "retryReasons": [],
-          "startAt": 1757668604692,
-          "status": "failed",
+          "startAt": 1757669084548,
+          "status": "passed",
           "title": "应该保留原有的0x前缀"
         },
         {
@@ -347,25 +271,15 @@
           ],
           "duration": 0,
           "failing": false,
-          "failureDetails": [
-            {
-              "code": "MODULE_NOT_FOUND",
-              "hint": "",
-              "siblingWithSimilarExtensionFound": false,
-              "moduleName": "@/utils/index.ts",
-              "_originalMessage": "Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'"
-            }
-          ],
-          "failureMessages": [
-            "Error: Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'\n    at Resolver._throwModNotFoundError (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:863:11)\n    at Resolver.resolveModule (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:810:10)\n    at Resolver._getVirtualMockPath (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:1004:84)\n    at Resolver._getAbsolutePath (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:984:98)\n    at Resolver.getModuleID (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:949:31)\n    at Runtime._shouldMockCjs (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runtime/build/index.js:1486:37)\n    at Runtime.requireModuleOrMock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runtime/build/index.js:961:16)\n    at _indexts (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/tests/unit/formatwallet.spec.ts:1:40)\n    at Object.withoutPrefix (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/tests/unit/formatwallet.spec.ts:73:13)\n    at Promise.finally.completed (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1556:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1496:10)\n    at _callCircusTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1006:40)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at _runTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:946:3)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:839:13)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at run (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:757:3)\n    at runAndTransformResultsToJestFormat (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1917:21)\n    at jestAdapter (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/runner.js:101:19)\n    at runTestInternal (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runner/build/index.js:275:16)\n    at runTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runner/build/index.js:343:7)"
-          ],
+          "failureDetails": [],
+          "failureMessages": [],
           "fullName": "formatWalletAddress 函数测试 前缀处理测试 没有0x前缀的地址不应该添加前缀",
           "invocations": 1,
           "location": null,
-          "numPassingAsserts": 0,
+          "numPassingAsserts": 2,
           "retryReasons": [],
-          "startAt": 1757668604693,
-          "status": "failed",
+          "startAt": 1757669084548,
+          "status": "passed",
           "title": "没有0x前缀的地址不应该添加前缀"
         },
         {
@@ -373,27 +287,17 @@
             "formatWalletAddress 函数测试",
             "特殊字符和格式测试"
           ],
-          "duration": 0,
+          "duration": 1,
           "failing": false,
-          "failureDetails": [
-            {
-              "code": "MODULE_NOT_FOUND",
-              "hint": "",
-              "siblingWithSimilarExtensionFound": false,
-              "moduleName": "@/utils/index.ts",
-              "_originalMessage": "Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'"
-            }
-          ],
-          "failureMessages": [
-            "Error: Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'\n    at Resolver._throwModNotFoundError (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:863:11)\n    at Resolver.resolveModule (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:810:10)\n    at Resolver._getVirtualMockPath (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:1004:84)\n    at Resolver._getAbsolutePath (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:984:98)\n    at Resolver.getModuleID (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:949:31)\n    at Runtime._shouldMockCjs (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runtime/build/index.js:1486:37)\n    at Runtime.requireModuleOrMock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runtime/build/index.js:961:16)\n    at _indexts (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/tests/unit/formatwallet.spec.ts:1:40)\n    at Object.mixedCaseAddress (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/tests/unit/formatwallet.spec.ts:82:13)\n    at Promise.finally.completed (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1556:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1496:10)\n    at _callCircusTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1006:40)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at _runTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:946:3)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:839:13)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at run (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:757:3)\n    at runAndTransformResultsToJestFormat (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1917:21)\n    at jestAdapter (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/runner.js:101:19)\n    at runTestInternal (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runner/build/index.js:275:16)\n    at runTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runner/build/index.js:343:7)"
-          ],
+          "failureDetails": [],
+          "failureMessages": [],
           "fullName": "formatWalletAddress 函数测试 特殊字符和格式测试 应该正确处理大小写混合的地址",
           "invocations": 1,
           "location": null,
-          "numPassingAsserts": 0,
+          "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757668604694,
-          "status": "failed",
+          "startAt": 1757669084548,
+          "status": "passed",
           "title": "应该正确处理大小写混合的地址"
         },
         {
@@ -405,22 +309,24 @@
           "failing": false,
           "failureDetails": [
             {
-              "code": "MODULE_NOT_FOUND",
-              "hint": "",
-              "siblingWithSimilarExtensionFound": false,
-              "moduleName": "@/utils/index.ts",
-              "_originalMessage": "Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'"
+              "matcherResult": {
+                "actual": "0X742D...8C5E",
+                "expected": "0X742D35...8C5E",
+                "message": "\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"0X742D\u001b[7m35\u001b[27m...8C5E\"\u001b[39m\nReceived: \u001b[31m\"0X742D...8C5E\"\u001b[39m",
+                "name": "toBe",
+                "pass": false
+              }
             }
           ],
           "failureMessages": [
-            "Error: Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'\n    at Resolver._throwModNotFoundError (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:863:11)\n    at Resolver.resolveModule (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:810:10)\n    at Resolver._getVirtualMockPath (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:1004:84)\n    at Resolver._getAbsolutePath (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:984:98)\n    at Resolver.getModuleID (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:949:31)\n    at Runtime._shouldMockCjs (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runtime/build/index.js:1486:37)\n    at Runtime.requireModuleOrMock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runtime/build/index.js:961:16)\n    at _indexts (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/tests/unit/formatwallet.spec.ts:1:40)\n    at Object.upperCaseAddress (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/tests/unit/formatwallet.spec.ts:88:13)\n    at Promise.finally.completed (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1556:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1496:10)\n    at _callCircusTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1006:40)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at _runTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:946:3)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:839:13)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at run (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:757:3)\n    at runAndTransformResultsToJestFormat (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1917:21)\n    at jestAdapter (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/runner.js:101:19)\n    at runTestInternal (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runner/build/index.js:275:16)\n    at runTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runner/build/index.js:343:7)"
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"0X742D\u001b[7m35\u001b[27m...8C5E\"\u001b[39m\nReceived: \u001b[31m\"0X742D...8C5E\"\u001b[39m\n    at Object.formatWalletAddress (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/tests/unit/formatwallet.spec.ts:88:22)\n    at Promise.finally.completed (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1556:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1496:10)\n    at _callCircusTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1006:40)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at _runTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:946:3)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:839:13)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at run (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:757:3)\n    at runAndTransformResultsToJestFormat (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1917:21)\n    at jestAdapter (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/runner.js:101:19)\n    at runTestInternal (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runner/build/index.js:275:16)\n    at runTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runner/build/index.js:343:7)"
           ],
           "fullName": "formatWalletAddress 函数测试 特殊字符和格式测试 应该正确处理全大写地址",
           "invocations": 1,
           "location": null,
           "numPassingAsserts": 0,
           "retryReasons": [],
-          "startAt": 1757668604694,
+          "startAt": 1757669084549,
           "status": "failed",
           "title": "应该正确处理全大写地址"
         },
@@ -431,25 +337,15 @@
           ],
           "duration": 0,
           "failing": false,
-          "failureDetails": [
-            {
-              "code": "MODULE_NOT_FOUND",
-              "hint": "",
-              "siblingWithSimilarExtensionFound": false,
-              "moduleName": "@/utils/index.ts",
-              "_originalMessage": "Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'"
-            }
-          ],
-          "failureMessages": [
-            "Error: Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'\n    at Resolver._throwModNotFoundError (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:863:11)\n    at Resolver.resolveModule (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:810:10)\n    at Resolver._getVirtualMockPath (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:1004:84)\n    at Resolver._getAbsolutePath (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:984:98)\n    at Resolver.getModuleID (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:949:31)\n    at Runtime._shouldMockCjs (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runtime/build/index.js:1486:37)\n    at Runtime.requireModuleOrMock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runtime/build/index.js:961:16)\n    at _indexts (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/tests/unit/formatwallet.spec.ts:1:40)\n    at Object.lowerCaseAddress (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/tests/unit/formatwallet.spec.ts:94:13)\n    at Promise.finally.completed (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1556:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1496:10)\n    at _callCircusTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1006:40)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at _runTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:946:3)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:839:13)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at run (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:757:3)\n    at runAndTransformResultsToJestFormat (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1917:21)\n    at jestAdapter (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/runner.js:101:19)\n    at runTestInternal (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runner/build/index.js:275:16)\n    at runTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runner/build/index.js:343:7)"
-          ],
+          "failureDetails": [],
+          "failureMessages": [],
           "fullName": "formatWalletAddress 函数测试 特殊字符和格式测试 应该正确处理全小写地址",
           "invocations": 1,
           "location": null,
-          "numPassingAsserts": 0,
+          "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757668604695,
-          "status": "failed",
+          "startAt": 1757669084549,
+          "status": "passed",
           "title": "应该正确处理全小写地址"
         },
         {
@@ -459,25 +355,15 @@
           ],
           "duration": 0,
           "failing": false,
-          "failureDetails": [
-            {
-              "code": "MODULE_NOT_FOUND",
-              "hint": "",
-              "siblingWithSimilarExtensionFound": false,
-              "moduleName": "@/utils/index.ts",
-              "_originalMessage": "Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'"
-            }
-          ],
-          "failureMessages": [
-            "Error: Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'\n    at Resolver._throwModNotFoundError (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:863:11)\n    at Resolver.resolveModule (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:810:10)\n    at Resolver._getVirtualMockPath (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:1004:84)\n    at Resolver._getAbsolutePath (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:984:98)\n    at Resolver.getModuleID (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:949:31)\n    at Runtime._shouldMockCjs (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runtime/build/index.js:1486:37)\n    at Runtime.requireModuleOrMock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runtime/build/index.js:961:16)\n    at _indexts (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/tests/unit/formatwallet.spec.ts:1:40)\n    at Object.describe (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/tests/unit/formatwallet.spec.ts:100:3)\n    at Promise.finally.completed (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1556:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1496:10)\n    at _callCircusTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1006:40)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at _runTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:946:3)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:839:13)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at run (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:757:3)\n    at runAndTransformResultsToJestFormat (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1917:21)\n    at jestAdapter (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/runner.js:101:19)\n    at runTestInternal (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runner/build/index.js:275:16)\n    at runTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runner/build/index.js:343:7)"
-          ],
+          "failureDetails": [],
+          "failureMessages": [],
           "fullName": "formatWalletAddress 函数测试 参数验证测试 起始长度为0时应该正常工作",
           "invocations": 1,
           "location": null,
-          "numPassingAsserts": 0,
+          "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757668604695,
-          "status": "failed",
+          "startAt": 1757669084550,
+          "status": "passed",
           "title": "起始长度为0时应该正常工作"
         },
         {
@@ -489,22 +375,24 @@
           "failing": false,
           "failureDetails": [
             {
-              "code": "MODULE_NOT_FOUND",
-              "hint": "",
-              "siblingWithSimilarExtensionFound": false,
-              "moduleName": "@/utils/index.ts",
-              "_originalMessage": "Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'"
+              "matcherResult": {
+                "actual": "0x742d35...742d35Cc6634C0532925a3b8D45c7c8f8b9b8c5e",
+                "expected": "0x742d35...",
+                "message": "\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"0x742d35...\"\u001b[39m\nReceived: \u001b[31m\"0x742d35...\u001b[7m742d35Cc6634C0532925a3b8D45c7c8f8b9b8c5e\u001b[27m\"\u001b[39m",
+                "name": "toBe",
+                "pass": false
+              }
             }
           ],
           "failureMessages": [
-            "Error: Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'\n    at Resolver._throwModNotFoundError (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:863:11)\n    at Resolver.resolveModule (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:810:10)\n    at Resolver._getVirtualMockPath (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:1004:84)\n    at Resolver._getAbsolutePath (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:984:98)\n    at Resolver.getModuleID (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:949:31)\n    at Runtime._shouldMockCjs (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runtime/build/index.js:1486:37)\n    at Runtime.requireModuleOrMock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runtime/build/index.js:961:16)\n    at _indexts (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/tests/unit/formatwallet.spec.ts:1:40)\n    at Object.toBe (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/tests/unit/formatwallet.spec.ts:103:22)\n    at Promise.finally.completed (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1556:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1496:10)\n    at _callCircusTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1006:40)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at _runTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:946:3)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:839:13)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at run (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:757:3)\n    at runAndTransformResultsToJestFormat (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1917:21)\n    at jestAdapter (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/runner.js:101:19)\n    at runTestInternal (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runner/build/index.js:275:16)\n    at runTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runner/build/index.js:343:7)"
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"0x742d35...\"\u001b[39m\nReceived: \u001b[31m\"0x742d35...\u001b[7m742d35Cc6634C0532925a3b8D45c7c8f8b9b8c5e\u001b[27m\"\u001b[39m\n    at Object.formatWalletAddress (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/tests/unit/formatwallet.spec.ts:106:22)\n    at Promise.finally.completed (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1556:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1496:10)\n    at _callCircusTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1006:40)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at _runTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:946:3)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:839:13)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at run (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:757:3)\n    at runAndTransformResultsToJestFormat (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1917:21)\n    at jestAdapter (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/runner.js:101:19)\n    at runTestInternal (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runner/build/index.js:275:16)\n    at runTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runner/build/index.js:343:7)"
           ],
           "fullName": "formatWalletAddress 函数测试 参数验证测试 结尾长度为0时应该正常工作",
           "invocations": 1,
           "location": null,
           "numPassingAsserts": 0,
           "retryReasons": [],
-          "startAt": 1757668604696,
+          "startAt": 1757669084550,
           "status": "failed",
           "title": "结尾长度为0时应该正常工作"
         },
@@ -513,26 +401,28 @@
             "formatWalletAddress 函数测试",
             "参数验证测试"
           ],
-          "duration": 0,
+          "duration": 1,
           "failing": false,
           "failureDetails": [
             {
-              "code": "MODULE_NOT_FOUND",
-              "hint": "",
-              "siblingWithSimilarExtensionFound": false,
-              "moduleName": "@/utils/index.ts",
-              "_originalMessage": "Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'"
+              "matcherResult": {
+                "actual": "0x...742d35Cc6634C0532925a3b8D45c7c8f8b9b8c5e",
+                "expected": "0x...",
+                "message": "\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"0x...\"\u001b[39m\nReceived: \u001b[31m\"0x...\u001b[7m742d35Cc6634C0532925a3b8D45c7c8f8b9b8c5e\u001b[27m\"\u001b[39m",
+                "name": "toBe",
+                "pass": false
+              }
             }
           ],
           "failureMessages": [
-            "Error: Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'\n    at Resolver._throwModNotFoundError (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:863:11)\n    at Resolver.resolveModule (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:810:10)\n    at Resolver._getVirtualMockPath (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:1004:84)\n    at Resolver._getAbsolutePath (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:984:98)\n    at Resolver.getModuleID (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:949:31)\n    at Runtime._shouldMockCjs (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runtime/build/index.js:1486:37)\n    at Runtime.requireModuleOrMock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runtime/build/index.js:961:16)\n    at _indexts (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/tests/unit/formatwallet.spec.ts:1:40)\n    at Object.<anonymous> (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/tests/unit/formatwallet.spec.ts:108:27)\n    at Promise.finally.completed (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1556:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1496:10)\n    at _callCircusTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1006:40)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at _runTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:946:3)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:839:13)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at run (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:757:3)\n    at runAndTransformResultsToJestFormat (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1917:21)\n    at jestAdapter (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/runner.js:101:19)\n    at runTestInternal (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runner/build/index.js:275:16)\n    at runTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runner/build/index.js:343:7)"
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"0x...\"\u001b[39m\nReceived: \u001b[31m\"0x...\u001b[7m742d35Cc6634C0532925a3b8D45c7c8f8b9b8c5e\u001b[27m\"\u001b[39m\n    at Object.formatWalletAddress (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/tests/unit/formatwallet.spec.ts:111:22)\n    at Promise.finally.completed (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1556:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1496:10)\n    at _callCircusTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1006:40)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at _runTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:946:3)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:839:13)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at run (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:757:3)\n    at runAndTransformResultsToJestFormat (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1917:21)\n    at jestAdapter (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/runner.js:101:19)\n    at runTestInternal (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runner/build/index.js:275:16)\n    at runTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runner/build/index.js:343:7)"
           ],
           "fullName": "formatWalletAddress 函数测试 参数验证测试 起始和结尾长度都为0时应该只显示前缀和省略号",
           "invocations": 1,
           "location": null,
           "numPassingAsserts": 0,
           "retryReasons": [],
-          "startAt": 1757668604696,
+          "startAt": 1757669084550,
           "status": "failed",
           "title": "起始和结尾长度都为0时应该只显示前缀和省略号"
         },
@@ -545,22 +435,24 @@
           "failing": false,
           "failureDetails": [
             {
-              "code": "MODULE_NOT_FOUND",
-              "hint": "",
-              "siblingWithSimilarExtensionFound": false,
-              "moduleName": "@/utils/index.ts",
-              "_originalMessage": "Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'"
+              "matcherResult": {
+                "actual": "0x742d35Cc6634C0532925a3b8D45c7c8f8b9b8c5...8c5e",
+                "expected": "0x...8c5e",
+                "message": "\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"0x...8c5e\"\u001b[39m\nReceived: \u001b[31m\"0x\u001b[7m742d35Cc6634C0532925a3b8D45c7c8f8b9b8c5\u001b[27m...8c5e\"\u001b[39m",
+                "name": "toBe",
+                "pass": false
+              }
             }
           ],
           "failureMessages": [
-            "Error: Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'\n    at Resolver._throwModNotFoundError (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:863:11)\n    at Resolver.resolveModule (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:810:10)\n    at Resolver._getVirtualMockPath (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:1004:84)\n    at Resolver._getAbsolutePath (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:984:98)\n    at Resolver.getModuleID (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:949:31)\n    at Runtime._shouldMockCjs (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runtime/build/index.js:1486:37)\n    at Runtime.requireModuleOrMock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runtime/build/index.js:961:16)\n    at _indexts (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/tests/unit/formatwallet.spec.ts:1:40)\n    at Object.result (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/tests/unit/formatwallet.spec.ts:113:14)\n    at Promise.finally.completed (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1556:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1496:10)\n    at _callCircusTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1006:40)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at _runTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:946:3)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:839:13)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at run (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:757:3)\n    at runAndTransformResultsToJestFormat (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1917:21)\n    at jestAdapter (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/runner.js:101:19)\n    at runTestInternal (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runner/build/index.js:275:16)\n    at runTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runner/build/index.js:343:7)"
+            "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"0x...8c5e\"\u001b[39m\nReceived: \u001b[31m\"0x\u001b[7m742d35Cc6634C0532925a3b8D45c7c8f8b9b8c5\u001b[27m...8c5e\"\u001b[39m\n    at Object.formatWalletAddress (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/tests/unit/formatwallet.spec.ts:117:23)\n    at Promise.finally.completed (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1556:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1496:10)\n    at _callCircusTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1006:40)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at _runTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:946:3)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:839:13)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at run (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:757:3)\n    at runAndTransformResultsToJestFormat (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1917:21)\n    at jestAdapter (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/runner.js:101:19)\n    at runTestInternal (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runner/build/index.js:275:16)\n    at runTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runner/build/index.js:343:7)"
           ],
           "fullName": "formatWalletAddress 函数测试 参数验证测试 负数参数应该被处理为0",
           "invocations": 1,
           "location": null,
           "numPassingAsserts": 0,
           "retryReasons": [],
-          "startAt": 1757668604697,
+          "startAt": 1757669084551,
           "status": "failed",
           "title": "负数参数应该被处理为0"
         },
@@ -571,25 +463,15 @@
           ],
           "duration": 0,
           "failing": false,
-          "failureDetails": [
-            {
-              "code": "MODULE_NOT_FOUND",
-              "hint": "",
-              "siblingWithSimilarExtensionFound": false,
-              "moduleName": "@/utils/index.ts",
-              "_originalMessage": "Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'"
-            }
-          ],
-          "failureMessages": [
-            "Error: Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'\n    at Resolver._throwModNotFoundError (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:863:11)\n    at Resolver.resolveModule (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:810:10)\n    at Resolver._getVirtualMockPath (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:1004:84)\n    at Resolver._getAbsolutePath (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:984:98)\n    at Resolver.getModuleID (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:949:31)\n    at Runtime._shouldMockCjs (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runtime/build/index.js:1486:37)\n    at Runtime.requireModuleOrMock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runtime/build/index.js:961:16)\n    at _indexts (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/tests/unit/formatwallet.spec.ts:1:40)\n    at Object.<anonymous> (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/tests/unit/formatwallet.spec.ts:126:10)\n    at Promise.finally.completed (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1556:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1496:10)\n    at _callCircusTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1006:40)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at _runTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:946:3)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:839:13)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at run (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:757:3)\n    at runAndTransformResultsToJestFormat (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1917:21)\n    at jestAdapter (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/runner.js:101:19)\n    at runTestInternal (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runner/build/index.js:275:16)\n    at runTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runner/build/index.js:343:7)"
-          ],
+          "failureDetails": [],
+          "failureMessages": [],
           "fullName": "formatWalletAddress 函数测试 性能和压力测试 应该能处理非常长的地址字符串",
           "invocations": 1,
           "location": null,
-          "numPassingAsserts": 0,
+          "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757668604697,
-          "status": "failed",
+          "startAt": 1757669084552,
+          "status": "passed",
           "title": "应该能处理非常长的地址字符串"
         },
         {
@@ -599,29 +481,19 @@
           ],
           "duration": 0,
           "failing": false,
-          "failureDetails": [
-            {
-              "code": "MODULE_NOT_FOUND",
-              "hint": "",
-              "siblingWithSimilarExtensionFound": false,
-              "moduleName": "@/utils/index.ts",
-              "_originalMessage": "Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'"
-            }
-          ],
-          "failureMessages": [
-            "Error: Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'\n    at Resolver._throwModNotFoundError (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:863:11)\n    at Resolver.resolveModule (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:810:10)\n    at Resolver._getVirtualMockPath (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:1004:84)\n    at Resolver._getAbsolutePath (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:984:98)\n    at Resolver.getModuleID (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-resolve/build/index.js:949:31)\n    at Runtime._shouldMockCjs (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runtime/build/index.js:1486:37)\n    at Runtime.requireModuleOrMock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runtime/build/index.js:961:16)\n    at _indexts (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/tests/unit/formatwallet.spec.ts:1:40)\n    at /media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/tests/unit/formatwallet.spec.ts:136:9\n    at Array.map (<anonymous>)\n    at Object.<anonymous> (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/tests/unit/formatwallet.spec.ts:136:9)\n    at Promise.finally.completed (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1556:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1496:10)\n    at _callCircusTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1006:40)\n    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at _runTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:946:3)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:839:13)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at _runTestsForDescribeBlock (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at run (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:757:3)\n    at runAndTransformResultsToJestFormat (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1917:21)\n    at jestAdapter (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-circus/build/runner.js:101:19)\n    at runTestInternal (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runner/build/index.js:275:16)\n    at runTest (/media/test/7B2F59427DA77DE4/xx/webpack-ai-spa/node_modules/jest-runner/build/index.js:343:7)"
-          ],
+          "failureDetails": [],
+          "failureMessages": [],
           "fullName": "formatWalletAddress 函数测试 性能和压力测试 应该能批量处理多个地址",
           "invocations": 1,
           "location": null,
-          "numPassingAsserts": 0,
+          "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757668604698,
-          "status": "failed",
+          "startAt": 1757669084552,
+          "status": "passed",
           "title": "应该能批量处理多个地址"
         }
       ],
-      "failureMessage": "\u001b[1m\u001b[31m  \u001b[1m● \u001b[22m\u001b[1mformatWalletAddress 函数测试 › 基本功能测试 › 应该正确格式化标准的以太坊地址（带0x前缀）\u001b[39m\u001b[22m\n\n    Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[2m\u001b[39m\u001b[90m 1 |\u001b[39m \u001b[36mimport\u001b[39m { formatWalletAddress } \u001b[36mfrom\u001b[39m \u001b[32m\"@/utils/index.ts\"\u001b[39m\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m   |\u001b[39m                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[2m\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 2 |\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 3 |\u001b[39m describe(\u001b[32m'formatWalletAddress 函数测试'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[22m\n\u001b[2m     \u001b[90m 4 |\u001b[39m   \u001b[90m// 测试数据\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Resolver._throwModNotFoundError (\u001b[22m\u001b[2mnode_modules/jest-resolve/build/index.js\u001b[2m:863:11)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat _indexts (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/formatwallet.spec.ts\u001b[39m\u001b[0m\u001b[2m:1:40)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.<anonymous> (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/formatwallet.spec.ts\u001b[39m\u001b[0m\u001b[2m:10:12)\u001b[22m\u001b[2m\u001b[22m\n\n\u001b[1m\u001b[31m  \u001b[1m● \u001b[22m\u001b[1mformatWalletAddress 函数测试 › 基本功能测试 › 应该正确格式化不带0x前缀的地址\u001b[39m\u001b[22m\n\n    Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[2m\u001b[39m\u001b[90m 1 |\u001b[39m \u001b[36mimport\u001b[39m { formatWalletAddress } \u001b[36mfrom\u001b[39m \u001b[32m\"@/utils/index.ts\"\u001b[39m\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m   |\u001b[39m                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[2m\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 2 |\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 3 |\u001b[39m describe(\u001b[32m'formatWalletAddress 函数测试'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[22m\n\u001b[2m     \u001b[90m 4 |\u001b[39m   \u001b[90m// 测试数据\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Resolver._throwModNotFoundError (\u001b[22m\u001b[2mnode_modules/jest-resolve/build/index.js\u001b[2m:863:11)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat _indexts (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/formatwallet.spec.ts\u001b[39m\u001b[0m\u001b[2m:1:40)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.<anonymous> (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/formatwallet.spec.ts\u001b[39m\u001b[0m\u001b[2m:13:27)\u001b[22m\u001b[2m\u001b[22m\n\n\u001b[1m\u001b[31m  \u001b[1m● \u001b[22m\u001b[1mformatWalletAddress 函数测试 › 基本功能测试 › 应该使用默认参数（startLength=6, endLength=4）\u001b[39m\u001b[22m\n\n    Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[2m\u001b[39m\u001b[90m 1 |\u001b[39m \u001b[36mimport\u001b[39m { formatWalletAddress } \u001b[36mfrom\u001b[39m \u001b[32m\"@/utils/index.ts\"\u001b[39m\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m   |\u001b[39m                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[2m\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 2 |\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 3 |\u001b[39m describe(\u001b[32m'formatWalletAddress 函数测试'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[22m\n\u001b[2m     \u001b[90m 4 |\u001b[39m   \u001b[90m// 测试数据\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Resolver._throwModNotFoundError (\u001b[22m\u001b[2mnode_modules/jest-resolve/build/index.js\u001b[2m:863:11)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat _indexts (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/formatwallet.spec.ts\u001b[39m\u001b[0m\u001b[2m:1:40)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.test (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/formatwallet.spec.ts\u001b[39m\u001b[0m\u001b[2m:21:5)\u001b[22m\u001b[2m\u001b[22m\n\n\u001b[1m\u001b[31m  \u001b[1m● \u001b[22m\u001b[1mformatWalletAddress 函数测试 › 自定义参数测试 › 应该支持同时自定义起始和结尾长度\u001b[39m\u001b[22m\n\n    Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[2m\u001b[39m\u001b[90m 1 |\u001b[39m \u001b[36mimport\u001b[39m { formatWalletAddress } \u001b[36mfrom\u001b[39m \u001b[32m\"@/utils/index.ts\"\u001b[39m\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m   |\u001b[39m                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[2m\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 2 |\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 3 |\u001b[39m describe(\u001b[32m'formatWalletAddress 函数测试'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[22m\n\u001b[2m     \u001b[90m 4 |\u001b[39m   \u001b[90m// 测试数据\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Resolver._throwModNotFoundError (\u001b[22m\u001b[2mnode_modules/jest-resolve/build/index.js\u001b[2m:863:11)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat _indexts (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/formatwallet.spec.ts\u001b[39m\u001b[0m\u001b[2m:1:40)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.describe (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/formatwallet.spec.ts\u001b[39m\u001b[0m\u001b[2m:27:3)\u001b[22m\u001b[2m\u001b[22m\n\n\u001b[1m\u001b[31m  \u001b[1m● \u001b[22m\u001b[1mformatWalletAddress 函数测试 › 自定义参数测试 › 应该支持较大的起始和结尾长度\u001b[39m\u001b[22m\n\n    Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[2m\u001b[39m\u001b[90m 1 |\u001b[39m \u001b[36mimport\u001b[39m { formatWalletAddress } \u001b[36mfrom\u001b[39m \u001b[32m\"@/utils/index.ts\"\u001b[39m\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m   |\u001b[39m                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[2m\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 2 |\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 3 |\u001b[39m describe(\u001b[32m'formatWalletAddress 函数测试'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[22m\n\u001b[2m     \u001b[90m 4 |\u001b[39m   \u001b[90m// 测试数据\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Resolver._throwModNotFoundError (\u001b[22m\u001b[2mnode_modules/jest-resolve/build/index.js\u001b[2m:863:11)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat _indexts (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/formatwallet.spec.ts\u001b[39m\u001b[0m\u001b[2m:1:40)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.<anonymous> (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/formatwallet.spec.ts\u001b[39m\u001b[0m\u001b[2m:30:27)\u001b[22m\u001b[2m\u001b[22m\n\n\u001b[1m\u001b[31m  \u001b[1m● \u001b[22m\u001b[1mformatWalletAddress 函数测试 › 边界情况测试 › 空字符串应该返回空字符串\u001b[39m\u001b[22m\n\n    Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[2m\u001b[39m\u001b[90m 1 |\u001b[39m \u001b[36mimport\u001b[39m { formatWalletAddress } \u001b[36mfrom\u001b[39m \u001b[32m\"@/utils/index.ts\"\u001b[39m\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m   |\u001b[39m                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[2m\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 2 |\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 3 |\u001b[39m describe(\u001b[32m'formatWalletAddress 函数测试'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[22m\n\u001b[2m     \u001b[90m 4 |\u001b[39m   \u001b[90m// 测试数据\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Resolver._throwModNotFoundError (\u001b[22m\u001b[2mnode_modules/jest-resolve/build/index.js\u001b[2m:863:11)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat _indexts (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/formatwallet.spec.ts\u001b[39m\u001b[0m\u001b[2m:1:40)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.describe (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/formatwallet.spec.ts\u001b[39m\u001b[0m\u001b[2m:39:3)\u001b[22m\u001b[2m\u001b[22m\n\n\u001b[1m\u001b[31m  \u001b[1m● \u001b[22m\u001b[1mformatWalletAddress 函数测试 › 边界情况测试 › null 或 undefined 应该返回空字符串\u001b[39m\u001b[22m\n\n    Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[2m\u001b[39m\u001b[90m 1 |\u001b[39m \u001b[36mimport\u001b[39m { formatWalletAddress } \u001b[36mfrom\u001b[39m \u001b[32m\"@/utils/index.ts\"\u001b[39m\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m   |\u001b[39m                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[2m\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 2 |\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 3 |\u001b[39m describe(\u001b[32m'formatWalletAddress 函数测试'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[22m\n\u001b[2m     \u001b[90m 4 |\u001b[39m   \u001b[90m// 测试数据\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Resolver._throwModNotFoundError (\u001b[22m\u001b[2mnode_modules/jest-resolve/build/index.js\u001b[2m:863:11)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat _indexts (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/formatwallet.spec.ts\u001b[39m\u001b[0m\u001b[2m:1:40)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.result (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/formatwallet.spec.ts\u001b[39m\u001b[0m\u001b[2m:42:14)\u001b[22m\u001b[2m\u001b[22m\n\n\u001b[1m\u001b[31m  \u001b[1m● \u001b[22m\u001b[1mformatWalletAddress 函数测试 › 边界情况测试 › 地址长度小于等于 startLength + endLength 时应该返回原地址\u001b[39m\u001b[22m\n\n    Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[2m\u001b[39m\u001b[90m 1 |\u001b[39m \u001b[36mimport\u001b[39m { formatWalletAddress } \u001b[36mfrom\u001b[39m \u001b[32m\"@/utils/index.ts\"\u001b[39m\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m   |\u001b[39m                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[2m\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 2 |\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 3 |\u001b[39m describe(\u001b[32m'formatWalletAddress 函数测试'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[22m\n\u001b[2m     \u001b[90m 4 |\u001b[39m   \u001b[90m// 测试数据\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Resolver._throwModNotFoundError (\u001b[22m\u001b[2mnode_modules/jest-resolve/build/index.js\u001b[2m:863:11)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat _indexts (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/formatwallet.spec.ts\u001b[39m\u001b[0m\u001b[2m:1:40)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.test (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/formatwallet.spec.ts\u001b[39m\u001b[0m\u001b[2m:50:5)\u001b[22m\u001b[2m\u001b[22m\n\n\u001b[1m\u001b[31m  \u001b[1m● \u001b[22m\u001b[1mformatWalletAddress 函数测试 › 边界情况测试 › 刚好超过最小长度的地址应该被格式化\u001b[39m\u001b[22m\n\n    Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[2m\u001b[39m\u001b[90m 1 |\u001b[39m \u001b[36mimport\u001b[39m { formatWalletAddress } \u001b[36mfrom\u001b[39m \u001b[32m\"@/utils/index.ts\"\u001b[39m\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m   |\u001b[39m                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[2m\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 2 |\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 3 |\u001b[39m describe(\u001b[32m'formatWalletAddress 函数测试'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[22m\n\u001b[2m     \u001b[90m 4 |\u001b[39m   \u001b[90m// 测试数据\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Resolver._throwModNotFoundError (\u001b[22m\u001b[2mnode_modules/jest-resolve/build/index.js\u001b[2m:863:11)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat _indexts (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/formatwallet.spec.ts\u001b[39m\u001b[0m\u001b[2m:1:40)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.<anonymous> (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/formatwallet.spec.ts\u001b[39m\u001b[0m\u001b[2m:57:10)\u001b[22m\u001b[2m\u001b[22m\n\n\u001b[1m\u001b[31m  \u001b[1m● \u001b[22m\u001b[1mformatWalletAddress 函数测试 › 前缀处理测试 › 应该保留原有的0x前缀\u001b[39m\u001b[22m\n\n    Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[2m\u001b[39m\u001b[90m 1 |\u001b[39m \u001b[36mimport\u001b[39m { formatWalletAddress } \u001b[36mfrom\u001b[39m \u001b[32m\"@/utils/index.ts\"\u001b[39m\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m   |\u001b[39m                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[2m\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 2 |\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 3 |\u001b[39m describe(\u001b[32m'formatWalletAddress 函数测试'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[22m\n\u001b[2m     \u001b[90m 4 |\u001b[39m   \u001b[90m// 测试数据\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Resolver._throwModNotFoundError (\u001b[22m\u001b[2mnode_modules/jest-resolve/build/index.js\u001b[2m:863:11)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat _indexts (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/formatwallet.spec.ts\u001b[39m\u001b[0m\u001b[2m:1:40)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.withPrefix (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/formatwallet.spec.ts\u001b[39m\u001b[0m\u001b[2m:66:13)\u001b[22m\u001b[2m\u001b[22m\n\n\u001b[1m\u001b[31m  \u001b[1m● \u001b[22m\u001b[1mformatWalletAddress 函数测试 › 前缀处理测试 › 没有0x前缀的地址不应该添加前缀\u001b[39m\u001b[22m\n\n    Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[2m\u001b[39m\u001b[90m 1 |\u001b[39m \u001b[36mimport\u001b[39m { formatWalletAddress } \u001b[36mfrom\u001b[39m \u001b[32m\"@/utils/index.ts\"\u001b[39m\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m   |\u001b[39m                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[2m\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 2 |\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 3 |\u001b[39m describe(\u001b[32m'formatWalletAddress 函数测试'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[22m\n\u001b[2m     \u001b[90m 4 |\u001b[39m   \u001b[90m// 测试数据\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Resolver._throwModNotFoundError (\u001b[22m\u001b[2mnode_modules/jest-resolve/build/index.js\u001b[2m:863:11)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat _indexts (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/formatwallet.spec.ts\u001b[39m\u001b[0m\u001b[2m:1:40)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.withoutPrefix (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/formatwallet.spec.ts\u001b[39m\u001b[0m\u001b[2m:73:13)\u001b[22m\u001b[2m\u001b[22m\n\n\u001b[1m\u001b[31m  \u001b[1m● \u001b[22m\u001b[1mformatWalletAddress 函数测试 › 特殊字符和格式测试 › 应该正确处理大小写混合的地址\u001b[39m\u001b[22m\n\n    Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[2m\u001b[39m\u001b[90m 1 |\u001b[39m \u001b[36mimport\u001b[39m { formatWalletAddress } \u001b[36mfrom\u001b[39m \u001b[32m\"@/utils/index.ts\"\u001b[39m\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m   |\u001b[39m                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[2m\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 2 |\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 3 |\u001b[39m describe(\u001b[32m'formatWalletAddress 函数测试'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[22m\n\u001b[2m     \u001b[90m 4 |\u001b[39m   \u001b[90m// 测试数据\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Resolver._throwModNotFoundError (\u001b[22m\u001b[2mnode_modules/jest-resolve/build/index.js\u001b[2m:863:11)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat _indexts (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/formatwallet.spec.ts\u001b[39m\u001b[0m\u001b[2m:1:40)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.mixedCaseAddress (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/formatwallet.spec.ts\u001b[39m\u001b[0m\u001b[2m:82:13)\u001b[22m\u001b[2m\u001b[22m\n\n\u001b[1m\u001b[31m  \u001b[1m● \u001b[22m\u001b[1mformatWalletAddress 函数测试 › 特殊字符和格式测试 › 应该正确处理全大写地址\u001b[39m\u001b[22m\n\n    Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[2m\u001b[39m\u001b[90m 1 |\u001b[39m \u001b[36mimport\u001b[39m { formatWalletAddress } \u001b[36mfrom\u001b[39m \u001b[32m\"@/utils/index.ts\"\u001b[39m\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m   |\u001b[39m                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[2m\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 2 |\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 3 |\u001b[39m describe(\u001b[32m'formatWalletAddress 函数测试'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[22m\n\u001b[2m     \u001b[90m 4 |\u001b[39m   \u001b[90m// 测试数据\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Resolver._throwModNotFoundError (\u001b[22m\u001b[2mnode_modules/jest-resolve/build/index.js\u001b[2m:863:11)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat _indexts (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/formatwallet.spec.ts\u001b[39m\u001b[0m\u001b[2m:1:40)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.upperCaseAddress (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/formatwallet.spec.ts\u001b[39m\u001b[0m\u001b[2m:88:13)\u001b[22m\u001b[2m\u001b[22m\n\n\u001b[1m\u001b[31m  \u001b[1m● \u001b[22m\u001b[1mformatWalletAddress 函数测试 › 特殊字符和格式测试 › 应该正确处理全小写地址\u001b[39m\u001b[22m\n\n    Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[2m\u001b[39m\u001b[90m 1 |\u001b[39m \u001b[36mimport\u001b[39m { formatWalletAddress } \u001b[36mfrom\u001b[39m \u001b[32m\"@/utils/index.ts\"\u001b[39m\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m   |\u001b[39m                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[2m\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 2 |\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 3 |\u001b[39m describe(\u001b[32m'formatWalletAddress 函数测试'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[22m\n\u001b[2m     \u001b[90m 4 |\u001b[39m   \u001b[90m// 测试数据\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Resolver._throwModNotFoundError (\u001b[22m\u001b[2mnode_modules/jest-resolve/build/index.js\u001b[2m:863:11)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat _indexts (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/formatwallet.spec.ts\u001b[39m\u001b[0m\u001b[2m:1:40)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.lowerCaseAddress (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/formatwallet.spec.ts\u001b[39m\u001b[0m\u001b[2m:94:13)\u001b[22m\u001b[2m\u001b[22m\n\n\u001b[1m\u001b[31m  \u001b[1m● \u001b[22m\u001b[1mformatWalletAddress 函数测试 › 参数验证测试 › 起始长度为0时应该正常工作\u001b[39m\u001b[22m\n\n    Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[2m\u001b[39m\u001b[90m 1 |\u001b[39m \u001b[36mimport\u001b[39m { formatWalletAddress } \u001b[36mfrom\u001b[39m \u001b[32m\"@/utils/index.ts\"\u001b[39m\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m   |\u001b[39m                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[2m\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 2 |\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 3 |\u001b[39m describe(\u001b[32m'formatWalletAddress 函数测试'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[22m\n\u001b[2m     \u001b[90m 4 |\u001b[39m   \u001b[90m// 测试数据\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Resolver._throwModNotFoundError (\u001b[22m\u001b[2mnode_modules/jest-resolve/build/index.js\u001b[2m:863:11)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat _indexts (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/formatwallet.spec.ts\u001b[39m\u001b[0m\u001b[2m:1:40)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.describe (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/formatwallet.spec.ts\u001b[39m\u001b[0m\u001b[2m:100:3)\u001b[22m\u001b[2m\u001b[22m\n\n\u001b[1m\u001b[31m  \u001b[1m● \u001b[22m\u001b[1mformatWalletAddress 函数测试 › 参数验证测试 › 结尾长度为0时应该正常工作\u001b[39m\u001b[22m\n\n    Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[2m\u001b[39m\u001b[90m 1 |\u001b[39m \u001b[36mimport\u001b[39m { formatWalletAddress } \u001b[36mfrom\u001b[39m \u001b[32m\"@/utils/index.ts\"\u001b[39m\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m   |\u001b[39m                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[2m\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 2 |\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 3 |\u001b[39m describe(\u001b[32m'formatWalletAddress 函数测试'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[22m\n\u001b[2m     \u001b[90m 4 |\u001b[39m   \u001b[90m// 测试数据\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Resolver._throwModNotFoundError (\u001b[22m\u001b[2mnode_modules/jest-resolve/build/index.js\u001b[2m:863:11)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat _indexts (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/formatwallet.spec.ts\u001b[39m\u001b[0m\u001b[2m:1:40)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.toBe (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/formatwallet.spec.ts\u001b[39m\u001b[0m\u001b[2m:103:22)\u001b[22m\u001b[2m\u001b[22m\n\n\u001b[1m\u001b[31m  \u001b[1m● \u001b[22m\u001b[1mformatWalletAddress 函数测试 › 参数验证测试 › 起始和结尾长度都为0时应该只显示前缀和省略号\u001b[39m\u001b[22m\n\n    Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[2m\u001b[39m\u001b[90m 1 |\u001b[39m \u001b[36mimport\u001b[39m { formatWalletAddress } \u001b[36mfrom\u001b[39m \u001b[32m\"@/utils/index.ts\"\u001b[39m\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m   |\u001b[39m                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[2m\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 2 |\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 3 |\u001b[39m describe(\u001b[32m'formatWalletAddress 函数测试'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[22m\n\u001b[2m     \u001b[90m 4 |\u001b[39m   \u001b[90m// 测试数据\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Resolver._throwModNotFoundError (\u001b[22m\u001b[2mnode_modules/jest-resolve/build/index.js\u001b[2m:863:11)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat _indexts (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/formatwallet.spec.ts\u001b[39m\u001b[0m\u001b[2m:1:40)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.<anonymous> (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/formatwallet.spec.ts\u001b[39m\u001b[0m\u001b[2m:108:27)\u001b[22m\u001b[2m\u001b[22m\n\n\u001b[1m\u001b[31m  \u001b[1m● \u001b[22m\u001b[1mformatWalletAddress 函数测试 › 参数验证测试 › 负数参数应该被处理为0\u001b[39m\u001b[22m\n\n    Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[2m\u001b[39m\u001b[90m 1 |\u001b[39m \u001b[36mimport\u001b[39m { formatWalletAddress } \u001b[36mfrom\u001b[39m \u001b[32m\"@/utils/index.ts\"\u001b[39m\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m   |\u001b[39m                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[2m\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 2 |\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 3 |\u001b[39m describe(\u001b[32m'formatWalletAddress 函数测试'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[22m\n\u001b[2m     \u001b[90m 4 |\u001b[39m   \u001b[90m// 测试数据\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Resolver._throwModNotFoundError (\u001b[22m\u001b[2mnode_modules/jest-resolve/build/index.js\u001b[2m:863:11)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat _indexts (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/formatwallet.spec.ts\u001b[39m\u001b[0m\u001b[2m:1:40)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.result (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/formatwallet.spec.ts\u001b[39m\u001b[0m\u001b[2m:113:14)\u001b[22m\u001b[2m\u001b[22m\n\n\u001b[1m\u001b[31m  \u001b[1m● \u001b[22m\u001b[1mformatWalletAddress 函数测试 › 性能和压力测试 › 应该能处理非常长的地址字符串\u001b[39m\u001b[22m\n\n    Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[2m\u001b[39m\u001b[90m 1 |\u001b[39m \u001b[36mimport\u001b[39m { formatWalletAddress } \u001b[36mfrom\u001b[39m \u001b[32m\"@/utils/index.ts\"\u001b[39m\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m   |\u001b[39m                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[2m\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 2 |\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 3 |\u001b[39m describe(\u001b[32m'formatWalletAddress 函数测试'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[22m\n\u001b[2m     \u001b[90m 4 |\u001b[39m   \u001b[90m// 测试数据\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Resolver._throwModNotFoundError (\u001b[22m\u001b[2mnode_modules/jest-resolve/build/index.js\u001b[2m:863:11)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat _indexts (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/formatwallet.spec.ts\u001b[39m\u001b[0m\u001b[2m:1:40)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.<anonymous> (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/formatwallet.spec.ts\u001b[39m\u001b[0m\u001b[2m:126:10)\u001b[22m\u001b[2m\u001b[22m\n\n\u001b[1m\u001b[31m  \u001b[1m● \u001b[22m\u001b[1mformatWalletAddress 函数测试 › 性能和压力测试 › 应该能批量处理多个地址\u001b[39m\u001b[22m\n\n    Cannot find module '@/utils/index.ts' from 'tests/unit/formatwallet.spec.ts'\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[2m\u001b[39m\u001b[90m 1 |\u001b[39m \u001b[36mimport\u001b[39m { formatWalletAddress } \u001b[36mfrom\u001b[39m \u001b[32m\"@/utils/index.ts\"\u001b[39m\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m   |\u001b[39m                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[2m\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 2 |\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 3 |\u001b[39m describe(\u001b[32m'formatWalletAddress 函数测试'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[22m\n\u001b[2m     \u001b[90m 4 |\u001b[39m   \u001b[90m// 测试数据\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Resolver._throwModNotFoundError (\u001b[22m\u001b[2mnode_modules/jest-resolve/build/index.js\u001b[2m:863:11)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat _indexts (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/formatwallet.spec.ts\u001b[39m\u001b[0m\u001b[2m:1:40)\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat \u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/formatwallet.spec.ts\u001b[39m\u001b[0m\u001b[2m:136:9\u001b[22m\u001b[2m\u001b[22m\n\u001b[2m          at Array.map (<anonymous>)\u001b[22m\n\u001b[2m      \u001b[2mat Object.<anonymous> (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/formatwallet.spec.ts\u001b[39m\u001b[0m\u001b[2m:136:9)\u001b[22m\u001b[2m\u001b[22m\n"
+      "failureMessage": "\u001b[1m\u001b[31m  \u001b[1m● \u001b[22m\u001b[1mformatWalletAddress 函数测试 › 自定义参数测试 › 应该支持同时自定义起始和结尾长度\u001b[39m\u001b[22m\n\n    \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\n    Expected: \u001b[32m\"0x742d35Cc...b8c5e\"\u001b[39m\n    Received: \u001b[31m\"0x742d35Cc...\u001b[7m9\u001b[27mb8c5e\"\u001b[39m\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 26 |\u001b[39m   describe(\u001b[32m'自定义参数测试'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[22m\n\u001b[2m     \u001b[90m 27 |\u001b[39m     test(\u001b[32m'应该支持同时自定义起始和结尾长度'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[22m\n\u001b[2m    \u001b[31m\u001b[1m>\u001b[22m\u001b[2m\u001b[39m\u001b[90m 28 |\u001b[39m       \u001b[36mconst\u001b[39m result \u001b[33m=\u001b[39m formatWalletAddress(validAddress\u001b[33m,\u001b[39m \u001b[35m8\u001b[39m\u001b[33m,\u001b[39m \u001b[35m6\u001b[39m)\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m    |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[2m\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 29 |\u001b[39m       expect(result)\u001b[33m.\u001b[39mtoBe(\u001b[32m'0x742d35Cc...b8c5e'\u001b[39m)\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 30 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 31 |\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.formatWalletAddress (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/formatwallet.spec.ts\u001b[39m\u001b[0m\u001b[2m:28:22)\u001b[22m\u001b[2m\u001b[22m\n\n\u001b[1m\u001b[31m  \u001b[1m● \u001b[22m\u001b[1mformatWalletAddress 函数测试 › 边界情况测试 › 地址长度小于等于 startLength + endLength 时应该返回原地址\u001b[39m\u001b[22m\n\n    \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\n    Expected: \u001b[32m\"0x1234567890\"\u001b[39m\n    Received: \u001b[31m\"0x123456\u001b[7m...\u001b[27m7890\"\u001b[39m\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 50 |\u001b[39m       \u001b[90m// 默认参数下，长度 <= 10 的地址应该原样返回\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 51 |\u001b[39m       expect(formatWalletAddress(shortAddress))\u001b[33m.\u001b[39mtoBe(shortAddress)\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m    \u001b[31m\u001b[1m>\u001b[22m\u001b[2m\u001b[39m\u001b[90m 52 |\u001b[39m       expect(formatWalletAddress(veryShortAddress))\u001b[33m.\u001b[39mtoBe(veryShortAddress)\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m    |\u001b[39m                                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[2m\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 53 |\u001b[39m       expect(formatWalletAddress(\u001b[32m'0x1234567890'\u001b[39m))\u001b[33m.\u001b[39mtoBe(\u001b[32m'0x1234567890'\u001b[39m)\u001b[33m;\u001b[39m \u001b[90m// 正好10位\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 54 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 55 |\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.veryShortAddress (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/formatwallet.spec.ts\u001b[39m\u001b[0m\u001b[2m:52:58)\u001b[22m\u001b[2m\u001b[22m\n\n\u001b[1m\u001b[31m  \u001b[1m● \u001b[22m\u001b[1mformatWalletAddress 函数测试 › 特殊字符和格式测试 › 应该正确处理全大写地址\u001b[39m\u001b[22m\n\n    \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\n    Expected: \u001b[32m\"0X742D\u001b[7m35\u001b[27m...8C5E\"\u001b[39m\n    Received: \u001b[31m\"0X742D...8C5E\"\u001b[39m\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 86 |\u001b[39m     test(\u001b[32m'应该正确处理全大写地址'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[22m\n\u001b[2m     \u001b[90m 87 |\u001b[39m       \u001b[36mconst\u001b[39m upperCaseAddress \u001b[33m=\u001b[39m \u001b[32m'0X742D35CC6634C0532925A3B8D45C7C8F8B9B8C5E'\u001b[39m\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m    \u001b[31m\u001b[1m>\u001b[22m\u001b[2m\u001b[39m\u001b[90m 88 |\u001b[39m       \u001b[36mconst\u001b[39m result \u001b[33m=\u001b[39m formatWalletAddress(upperCaseAddress)\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m    |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[2m\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 89 |\u001b[39m       expect(result)\u001b[33m.\u001b[39mtoBe(\u001b[32m'0X742D35...8C5E'\u001b[39m)\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 90 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 91 |\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.formatWalletAddress (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/formatwallet.spec.ts\u001b[39m\u001b[0m\u001b[2m:88:22)\u001b[22m\u001b[2m\u001b[22m\n\n\u001b[1m\u001b[31m  \u001b[1m● \u001b[22m\u001b[1mformatWalletAddress 函数测试 › 参数验证测试 › 结尾长度为0时应该正常工作\u001b[39m\u001b[22m\n\n    \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\n    Expected: \u001b[32m\"0x742d35...\"\u001b[39m\n    Received: \u001b[31m\"0x742d35...\u001b[7m742d35Cc6634C0532925a3b8D45c7c8f8b9b8c5e\u001b[27m\"\u001b[39m\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 104 |\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 105 |\u001b[39m     test(\u001b[32m'结尾长度为0时应该正常工作'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[22m\n\u001b[2m    \u001b[31m\u001b[1m>\u001b[22m\u001b[2m\u001b[39m\u001b[90m 106 |\u001b[39m       \u001b[36mconst\u001b[39m result \u001b[33m=\u001b[39m formatWalletAddress(validAddress\u001b[33m,\u001b[39m \u001b[35m6\u001b[39m\u001b[33m,\u001b[39m \u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m     |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[2m\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 107 |\u001b[39m       expect(result)\u001b[33m.\u001b[39mtoBe(\u001b[32m'0x742d35...'\u001b[39m)\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 108 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 109 |\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.formatWalletAddress (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/formatwallet.spec.ts\u001b[39m\u001b[0m\u001b[2m:106:22)\u001b[22m\u001b[2m\u001b[22m\n\n\u001b[1m\u001b[31m  \u001b[1m● \u001b[22m\u001b[1mformatWalletAddress 函数测试 › 参数验证测试 › 起始和结尾长度都为0时应该只显示前缀和省略号\u001b[39m\u001b[22m\n\n    \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\n    Expected: \u001b[32m\"0x...\"\u001b[39m\n    Received: \u001b[31m\"0x...\u001b[7m742d35Cc6634C0532925a3b8D45c7c8f8b9b8c5e\u001b[27m\"\u001b[39m\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 109 |\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 110 |\u001b[39m     test(\u001b[32m'起始和结尾长度都为0时应该只显示前缀和省略号'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[22m\n\u001b[2m    \u001b[31m\u001b[1m>\u001b[22m\u001b[2m\u001b[39m\u001b[90m 111 |\u001b[39m       \u001b[36mconst\u001b[39m result \u001b[33m=\u001b[39m formatWalletAddress(validAddress\u001b[33m,\u001b[39m \u001b[35m0\u001b[39m\u001b[33m,\u001b[39m \u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m     |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[2m\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 112 |\u001b[39m       expect(result)\u001b[33m.\u001b[39mtoBe(\u001b[32m'0x...'\u001b[39m)\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 113 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 114 |\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.formatWalletAddress (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/formatwallet.spec.ts\u001b[39m\u001b[0m\u001b[2m:111:22)\u001b[22m\u001b[2m\u001b[22m\n\n\u001b[1m\u001b[31m  \u001b[1m● \u001b[22m\u001b[1mformatWalletAddress 函数测试 › 参数验证测试 › 负数参数应该被处理为0\u001b[39m\u001b[22m\n\n    \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\n    Expected: \u001b[32m\"0x...8c5e\"\u001b[39m\n    Received: \u001b[31m\"0x\u001b[7m742d35Cc6634C0532925a3b8D45c7c8f8b9b8c5\u001b[27m...8c5e\"\u001b[39m\n\u001b[2m\u001b[22m\n\u001b[2m    \u001b[0m \u001b[90m 115 |\u001b[39m     test(\u001b[32m'负数参数应该被处理为0'\u001b[39m\u001b[33m,\u001b[39m () \u001b[33m=>\u001b[39m {\u001b[22m\n\u001b[2m     \u001b[90m 116 |\u001b[39m       \u001b[36mconst\u001b[39m result1 \u001b[33m=\u001b[39m formatWalletAddress(validAddress\u001b[33m,\u001b[39m \u001b[33m-\u001b[39m\u001b[35m1\u001b[39m\u001b[33m,\u001b[39m \u001b[35m4\u001b[39m)\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m    \u001b[31m\u001b[1m>\u001b[22m\u001b[2m\u001b[39m\u001b[90m 117 |\u001b[39m       \u001b[36mconst\u001b[39m result2 \u001b[33m=\u001b[39m formatWalletAddress(validAddress\u001b[33m,\u001b[39m \u001b[35m6\u001b[39m\u001b[33m,\u001b[39m \u001b[33m-\u001b[39m\u001b[35m1\u001b[39m)\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m     |\u001b[39m                       \u001b[31m\u001b[1m^\u001b[22m\u001b[2m\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 118 |\u001b[39m       \u001b[90m// 注意：slice(-1) 会从末尾开始，所以这里测试实际行为\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 119 |\u001b[39m       expect(result1)\u001b[33m.\u001b[39mtoBe(\u001b[32m'0x...8c5e'\u001b[39m)\u001b[33m;\u001b[39m\u001b[22m\n\u001b[2m     \u001b[90m 120 |\u001b[39m       expect(result2)\u001b[33m.\u001b[39mtoBe(\u001b[32m'0x742d35...'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\u001b[22m\n\u001b[2m\u001b[22m\n\u001b[2m      \u001b[2mat Object.formatWalletAddress (\u001b[22m\u001b[2m\u001b[0m\u001b[36mtests/unit/formatwallet.spec.ts\u001b[39m\u001b[0m\u001b[2m:117:23)\u001b[22m\u001b[2m\u001b[22m\n"
     },
     {
       "leaks": false,
@@ -631,16 +503,16 @@
       "numTodoTests": 0,
       "openHandles": [],
       "perfStats": {
-        "end": 1757668604773,
-        "loadTestEnvironmentEnd": 1757668604753,
-        "loadTestEnvironmentStart": 1757668604750,
-        "runtime": 20,
-        "setupAfterEnvEnd": 1757668604771,
-        "setupAfterEnvStart": 1757668604771,
-        "setupFilesEnd": 1757668604753,
-        "setupFilesStart": 1757668604753,
+        "end": 1757669084611,
+        "loadTestEnvironmentEnd": 1757669084587,
+        "loadTestEnvironmentStart": 1757669084584,
+        "runtime": 24,
+        "setupAfterEnvEnd": 1757669084609,
+        "setupAfterEnvStart": 1757669084608,
+        "setupFilesEnd": 1757669084587,
+        "setupFilesStart": 1757669084587,
         "slow": false,
-        "start": 1757668604753
+        "start": 1757669084587
       },
       "skipped": false,
       "snapshot": {
@@ -667,7 +539,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757668604772,
+          "startAt": 1757669084609,
           "status": "passed",
           "title": "简单的测试"
         }

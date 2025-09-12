@@ -1,5 +1,4 @@
-import { formatWalletAddress } from "@/utils/index";
-
+import { formatWalletAddress } from '@utils/index';
 describe('formatWalletAddress 函数测试', () => {
   // 测试数据
   const validAddress = '0x742d35Cc6634C0532925a3b8D45c7c8f8b9b8c5e';
