@@ -1,4 +1,4 @@
-import { formatWalletAddress } from "@/utils";
+import { formatWalletAddress } from "@/utils/index";
 
 describe('formatWalletAddress 函数测试', () => {
   // 测试数据
