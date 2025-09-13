@@ -1,3 +1,4 @@
+import Dapp from '@/pages/Dapp';
 import Loading from '@components/common/Loading';
 import PageNotFoundView from '@components/common/PageNotFoundView';
 import MainLayout from '@layouts/Layout';
@@ -19,6 +20,7 @@ const mainRoutes = {
   element: <Layout />,
   children: [
     { path: '*', element: <PageNotFoundView /> },
+    { path: '/dapp', element: <Dapp /> },
     { path: '404', element: <PageNotFoundView /> },
   ],
 };
