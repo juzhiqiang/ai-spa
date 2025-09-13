@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1757782949575" clover="3.2.0">
-  <project timestamp="1757782949575" name="All files">
-    <metrics statements="3" coveredstatements="3" conditionals="46" coveredconditionals="42" methods="15" coveredmethods="14" elements="64" coveredelements="59" complexity="0" loc="3" ncloc="3" packages="1" files="2" classes="2"/>
+<coverage generated="1757783485756" clover="3.2.0">
+  <project timestamp="1757783485756" name="All files">
+    <metrics statements="3" coveredstatements="3" conditionals="46" coveredconditionals="42" methods="15" coveredmethods="15" elements="64" coveredelements="60" complexity="0" loc="3" ncloc="3" packages="1" files="2" classes="2"/>
     <file name="avatarGenerator.ts" path="/media/jzq520cxm/32C4F0C5C4F08C7B/yidengschool/ai-spa/src/utils/avatarGenerator.ts">
-      <metrics statements="2" coveredstatements="2" conditionals="34" coveredconditionals="30" methods="13" coveredmethods="12"/>
-      <line num="1" count="40" type="cond" truecount="6" falsecount="0"/>
-      <line num="15" count="22" type="cond" truecount="24" falsecount="4"/>
+      <metrics statements="2" coveredstatements="2" conditionals="34" coveredconditionals="30" methods="13" coveredmethods="13"/>
+      <line num="1" count="61" type="cond" truecount="6" falsecount="0"/>
+      <line num="15" count="37" type="cond" truecount="24" falsecount="4"/>
     </file>
     <file name="index.ts" path="/media/jzq520cxm/32C4F0C5C4F08C7B/yidengschool/ai-spa/src/utils/index.ts">
       <metrics statements="1" coveredstatements="1" conditionals="12" coveredconditionals="12" methods="2" coveredmethods="2"/>

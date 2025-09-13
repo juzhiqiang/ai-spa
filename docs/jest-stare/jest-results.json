@@ -1,14 +1,14 @@
 {
-  "numFailedTestSuites": 1,
-  "numFailedTests": 2,
-  "numPassedTestSuites": 1,
-  "numPassedTests": 90,
+  "numFailedTestSuites": 0,
+  "numFailedTests": 0,
+  "numPassedTestSuites": 2,
+  "numPassedTests": 97,
   "numPendingTestSuites": 0,
   "numPendingTests": 0,
   "numRuntimeErrorTestSuites": 0,
   "numTodoTests": 0,
   "numTotalTestSuites": 2,
-  "numTotalTests": 92,
+  "numTotalTests": 97,
   "openHandles": [],
   "snapshot": {
     "added": 0,
@@ -26,7 +26,7 @@
     "unmatched": 0,
     "updated": 0
   },
-  "startTime": 1757782944232,
+  "startTime": 1757783480426,
   "success": false,
   "testResults": [
     {
@@ -37,16 +37,16 @@
       "numTodoTests": 0,
       "openHandles": [],
       "perfStats": {
-        "end": 1757782944498,
-        "loadTestEnvironmentEnd": 1757782944358,
-        "loadTestEnvironmentStart": 1757782944330,
-        "runtime": 140,
-        "setupAfterEnvEnd": 1757782944484,
-        "setupAfterEnvStart": 1757782944480,
-        "setupFilesEnd": 1757782944358,
-        "setupFilesStart": 1757782944358,
+        "end": 1757783480698,
+        "loadTestEnvironmentEnd": 1757783480559,
+        "loadTestEnvironmentStart": 1757783480531,
+        "runtime": 138,
+        "setupAfterEnvEnd": 1757783480686,
+        "setupAfterEnvStart": 1757783480683,
+        "setupFilesEnd": 1757783480560,
+        "setupFilesStart": 1757783480560,
         "slow": false,
-        "start": 1757782944358
+        "start": 1757783480560
       },
       "skipped": false,
       "snapshot": {
@@ -75,7 +75,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782944486,
+          "startAt": 1757783480688,
           "status": "passed",
           "title": "应该正确格式化标准的以太坊地址（带0x前缀）"
         },
@@ -85,7 +85,7 @@
             "formatWalletAddress 函数测试",
             "基本功能测试"
           ],
-          "duration": 1,
+          "duration": 0,
           "failing": false,
           "failureDetails": [],
           "failureMessages": [],
@@ -94,7 +94,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782944490,
+          "startAt": 1757783480692,
           "status": "passed",
           "title": "应该正确格式化不带0x前缀的地址"
         },
@@ -113,7 +113,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782944491,
+          "startAt": 1757783480692,
           "status": "passed",
           "title": "应该使用默认参数（startLength=6, endLength=4）"
         },
@@ -132,7 +132,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782944491,
+          "startAt": 1757783480692,
           "status": "passed",
           "title": "应该支持自定义起始长度"
         },
@@ -142,7 +142,7 @@
             "formatWalletAddress 函数测试",
             "自定义参数测试"
           ],
-          "duration": 0,
+          "duration": 1,
           "failing": false,
           "failureDetails": [],
           "failureMessages": [],
@@ -151,7 +151,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782944491,
+          "startAt": 1757783480692,
           "status": "passed",
           "title": "应该支持自定义结尾长度"
         },
@@ -170,7 +170,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782944491,
+          "startAt": 1757783480693,
           "status": "passed",
           "title": "应该支持同时自定义起始和结尾长度"
         },
@@ -189,7 +189,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782944491,
+          "startAt": 1757783480693,
           "status": "passed",
           "title": "应该支持较大的起始和结尾长度"
         },
@@ -199,7 +199,7 @@
             "formatWalletAddress 函数测试",
             "自定义参数测试"
           ],
-          "duration": 1,
+          "duration": 0,
           "failing": false,
           "failureDetails": [],
           "failureMessages": [],
@@ -208,7 +208,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782944491,
+          "startAt": 1757783480693,
           "status": "passed",
           "title": "应该支持起始长度为0"
         },
@@ -227,7 +227,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782944492,
+          "startAt": 1757783480693,
           "status": "passed",
           "title": "应该支持结尾长度为0"
         },
@@ -246,7 +246,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782944492,
+          "startAt": 1757783480693,
           "status": "passed",
           "title": "起始和结尾长度都为0时应该只显示前缀和省略号"
         },
@@ -256,7 +256,7 @@
             "formatWalletAddress 函数测试",
             "边界情况测试"
           ],
-          "duration": 0,
+          "duration": 1,
           "failing": false,
           "failureDetails": [],
           "failureMessages": [],
@@ -265,7 +265,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782944492,
+          "startAt": 1757783480693,
           "status": "passed",
           "title": "空字符串应该返回空字符串"
         },
@@ -284,7 +284,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782944492,
+          "startAt": 1757783480694,
           "status": "passed",
           "title": "null 应该返回空字符串"
         },
@@ -303,7 +303,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782944492,
+          "startAt": 1757783480694,
           "status": "passed",
           "title": "undefined 应该返回空字符串"
         },
@@ -322,7 +322,7 @@
           "location": null,
           "numPassingAsserts": 3,
           "retryReasons": [],
-          "startAt": 1757782944492,
+          "startAt": 1757783480694,
           "status": "passed",
           "title": "地址长度小于等于 startLength + endLength 时应该返回原地址"
         },
@@ -332,7 +332,7 @@
             "formatWalletAddress 函数测试",
             "边界情况测试"
           ],
-          "duration": 1,
+          "duration": 0,
           "failing": false,
           "failureDetails": [],
           "failureMessages": [],
@@ -341,7 +341,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782944492,
+          "startAt": 1757783480694,
           "status": "passed",
           "title": "刚好超过最小长度的地址应该被格式化"
         },
@@ -360,7 +360,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782944493,
+          "startAt": 1757783480694,
           "status": "passed",
           "title": "地址长度正好等于 startLength + endLength 时返回原地址"
         },
@@ -379,7 +379,7 @@
           "location": null,
           "numPassingAsserts": 2,
           "retryReasons": [],
-          "startAt": 1757782944493,
+          "startAt": 1757783480694,
           "status": "passed",
           "title": "应该保留原有的0x前缀"
         },
@@ -398,7 +398,7 @@
           "location": null,
           "numPassingAsserts": 2,
           "retryReasons": [],
-          "startAt": 1757782944493,
+          "startAt": 1757783480694,
           "status": "passed",
           "title": "没有0x前缀的地址不应该添加前缀"
         },
@@ -417,7 +417,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782944493,
+          "startAt": 1757783480694,
           "status": "passed",
           "title": "0x前缀应该在格式化后保持在开头"
         },
@@ -436,7 +436,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782944493,
+          "startAt": 1757783480695,
           "status": "passed",
           "title": "应该正确处理大小写混合的地址"
         },
@@ -455,7 +455,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782944493,
+          "startAt": 1757783480695,
           "status": "passed",
           "title": "应该正确处理全大写地址"
         },
@@ -474,7 +474,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782944493,
+          "startAt": 1757783480695,
           "status": "passed",
           "title": "应该正确处理全小写地址"
         },
@@ -493,7 +493,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782944494,
+          "startAt": 1757783480695,
           "status": "passed",
           "title": "应该处理包含特殊字符的字符串"
         },
@@ -512,7 +512,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782944494,
+          "startAt": 1757783480695,
           "status": "passed",
           "title": "负数起始长度应该被处理"
         },
@@ -531,7 +531,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782944494,
+          "startAt": 1757783480695,
           "status": "passed",
           "title": "负数结尾长度应该被处理"
         },
@@ -550,7 +550,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782944494,
+          "startAt": 1757783480695,
           "status": "passed",
           "title": "起始和结尾长度都为负数时应该被处理"
         },
@@ -569,7 +569,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782944494,
+          "startAt": 1757783480695,
           "status": "passed",
           "title": "非常大的起始长度应该正常工作"
         },
@@ -588,7 +588,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782944494,
+          "startAt": 1757783480695,
           "status": "passed",
           "title": "非常大的结尾长度应该正常工作"
         },
@@ -607,28 +607,9 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782944494,
+          "startAt": 1757783480695,
           "status": "passed",
           "title": "起始和结尾长度之和超过地址长度时应该返回原地址"
-        },
-        {
-          "ancestorTitles": [
-            "index 工具函数测试",
-            "formatWalletAddress 函数测试",
-            "性能和压力测试"
-          ],
-          "duration": 0,
-          "failing": false,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "index 工具函数测试 formatWalletAddress 函数测试 性能和压力测试 应该能处理非常长的地址字符串",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 2,
-          "retryReasons": [],
-          "startAt": 1757782944494,
-          "status": "passed",
-          "title": "应该能处理非常长的地址字符串"
         },
         {
           "ancestorTitles": [
@@ -640,12 +621,31 @@
           "failing": false,
           "failureDetails": [],
           "failureMessages": [],
+          "fullName": "index 工具函数测试 formatWalletAddress 函数测试 性能和压力测试 应该能处理非常长的地址字符串",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1757783480695,
+          "status": "passed",
+          "title": "应该能处理非常长的地址字符串"
+        },
+        {
+          "ancestorTitles": [
+            "index 工具函数测试",
+            "formatWalletAddress 函数测试",
+            "性能和压力测试"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
           "fullName": "index 工具函数测试 formatWalletAddress 函数测试 性能和压力测试 应该能批量处理多个地址",
           "invocations": 1,
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782944494,
+          "startAt": 1757783480696,
           "status": "passed",
           "title": "应该能批量处理多个地址"
         },
@@ -664,7 +664,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782944495,
+          "startAt": 1757783480696,
           "status": "passed",
           "title": "大量调用时应该保持性能"
         },
@@ -683,7 +683,7 @@
           "location": null,
           "numPassingAsserts": 2,
           "retryReasons": [],
-          "startAt": 1757782944496,
+          "startAt": 1757783480697,
           "status": "passed",
           "title": "测试各种精确的长度边界"
         },
@@ -702,7 +702,7 @@
           "location": null,
           "numPassingAsserts": 2,
           "retryReasons": [],
-          "startAt": 1757782944496,
+          "startAt": 1757783480697,
           "status": "passed",
           "title": "测试自定义参数下的边界值"
         },
@@ -721,7 +721,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782944496,
+          "startAt": 1757783480697,
           "status": "passed",
           "title": "以太坊主网地址格式化"
         },
@@ -740,28 +740,9 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782944496,
+          "startAt": 1757783480697,
           "status": "passed",
           "title": "BSC地址格式化"
-        },
-        {
-          "ancestorTitles": [
-            "index 工具函数测试",
-            "formatWalletAddress 函数测试",
-            "实际使用场景测试"
-          ],
-          "duration": 0,
-          "failing": false,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "index 工具函数测试 formatWalletAddress 函数测试 实际使用场景测试 Polygon地址格式化",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "startAt": 1757782944496,
-          "status": "passed",
-          "title": "Polygon地址格式化"
         },
         {
           "ancestorTitles": [
@@ -773,12 +754,31 @@
           "failing": false,
           "failureDetails": [],
           "failureMessages": [],
+          "fullName": "index 工具函数测试 formatWalletAddress 函数测试 实际使用场景测试 Polygon地址格式化",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757783480697,
+          "status": "passed",
+          "title": "Polygon地址格式化"
+        },
+        {
+          "ancestorTitles": [
+            "index 工具函数测试",
+            "formatWalletAddress 函数测试",
+            "实际使用场景测试"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
           "fullName": "index 工具函数测试 formatWalletAddress 函数测试 实际使用场景测试 自定义显示长度的钱包地址",
           "invocations": 1,
           "location": null,
           "numPassingAsserts": 2,
           "retryReasons": [],
-          "startAt": 1757782944496,
+          "startAt": 1757783480698,
           "status": "passed",
           "title": "自定义显示长度的钱包地址"
         }
@@ -787,22 +787,22 @@
     },
     {
       "leaks": false,
-      "numFailingTests": 2,
-      "numPassingTests": 52,
+      "numFailingTests": 0,
+      "numPassingTests": 59,
       "numPendingTests": 0,
       "numTodoTests": 0,
       "openHandles": [],
       "perfStats": {
-        "end": 1757782949525,
-        "loadTestEnvironmentEnd": 1757782944361,
-        "loadTestEnvironmentStart": 1757782944331,
-        "runtime": 5163,
-        "setupAfterEnvEnd": 1757782944484,
-        "setupAfterEnvStart": 1757782944480,
-        "setupFilesEnd": 1757782944362,
-        "setupFilesStart": 1757782944362,
+        "end": 1757783485709,
+        "loadTestEnvironmentEnd": 1757783480558,
+        "loadTestEnvironmentStart": 1757783480532,
+        "runtime": 5150,
+        "setupAfterEnvEnd": 1757783480685,
+        "setupAfterEnvStart": 1757783480681,
+        "setupFilesEnd": 1757783480559,
+        "setupFilesStart": 1757783480559,
         "slow": true,
-        "start": 1757782944362
+        "start": 1757783480559
       },
       "skipped": false,
       "snapshot": {
@@ -822,7 +822,7 @@
             "generateGradientAvatar 函数测试",
             "基本功能测试"
           ],
-          "duration": 8,
+          "duration": 6,
           "failing": false,
           "failureDetails": [],
           "failureMessages": [],
@@ -831,7 +831,7 @@
           "location": null,
           "numPassingAsserts": 6,
           "retryReasons": [],
-          "startAt": 1757782944491,
+          "startAt": 1757783480688,
           "status": "passed",
           "title": "应该为有效地址生成base64编码的SVG头像"
         },
@@ -850,7 +850,7 @@
           "location": null,
           "numPassingAsserts": 2,
           "retryReasons": [],
-          "startAt": 1757782944499,
+          "startAt": 1757783480694,
           "status": "passed",
           "title": "应该为不带0x前缀的地址生成头像"
         },
@@ -869,7 +869,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782944499,
+          "startAt": 1757783480695,
           "status": "passed",
           "title": "相同地址应该生成相同的头像"
         },
@@ -879,7 +879,7 @@
             "generateGradientAvatar 函数测试",
             "基本功能测试"
           ],
-          "duration": 1,
+          "duration": 0,
           "failing": false,
           "failureDetails": [],
           "failureMessages": [],
@@ -888,7 +888,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782944499,
+          "startAt": 1757783480695,
           "status": "passed",
           "title": "不同地址应该生成不同的头像"
         },
@@ -907,7 +907,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782944500,
+          "startAt": 1757783480695,
           "status": "passed",
           "title": "空字符串应该返回空字符串"
         },
@@ -926,7 +926,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782944500,
+          "startAt": 1757783480695,
           "status": "passed",
           "title": "null应该返回空字符串"
         },
@@ -945,28 +945,9 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782944500,
+          "startAt": 1757783480695,
           "status": "passed",
           "title": "undefined应该返回空字符串"
-        },
-        {
-          "ancestorTitles": [
-            "avatarGenerator 工具函数测试",
-            "generateGradientAvatar 函数测试",
-            "边界情况测试"
-          ],
-          "duration": 0,
-          "failing": false,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "avatarGenerator 工具函数测试 generateGradientAvatar 函数测试 边界情况测试 长度小于6的地址应该返回空字符串",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 2,
-          "retryReasons": [],
-          "startAt": 1757782944500,
-          "status": "passed",
-          "title": "长度小于6的地址应该返回空字符串"
         },
         {
           "ancestorTitles": [
@@ -978,12 +959,31 @@
           "failing": false,
           "failureDetails": [],
           "failureMessages": [],
+          "fullName": "avatarGenerator 工具函数测试 generateGradientAvatar 函数测试 边界情况测试 长度小于6的地址应该返回空字符串",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1757783480695,
+          "status": "passed",
+          "title": "长度小于6的地址应该返回空字符串"
+        },
+        {
+          "ancestorTitles": [
+            "avatarGenerator 工具函数测试",
+            "generateGradientAvatar 函数测试",
+            "边界情况测试"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
           "fullName": "avatarGenerator 工具函数测试 generateGradientAvatar 函数测试 边界情况测试 只有空格的字符串应该返回空字符串",
           "invocations": 1,
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782944500,
+          "startAt": 1757783480696,
           "status": "passed",
           "title": "只有空格的字符串应该返回空字符串"
         },
@@ -1002,7 +1002,7 @@
           "location": null,
           "numPassingAsserts": 2,
           "retryReasons": [],
-          "startAt": 1757782944501,
+          "startAt": 1757783480696,
           "status": "passed",
           "title": "生成的SVG应该包含正确的渐变ID"
         },
@@ -1021,7 +1021,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782944501,
+          "startAt": 1757783480696,
           "status": "passed",
           "title": "生成的SVG应该包含首字母"
         },
@@ -1040,7 +1040,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782944501,
+          "startAt": 1757783480696,
           "status": "passed",
           "title": "应该正确格式化长地址"
         },
@@ -1059,7 +1059,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782944501,
+          "startAt": 1757783480696,
           "status": "passed",
           "title": "应该处理不带0x前缀的地址"
         },
@@ -1078,7 +1078,7 @@
           "location": null,
           "numPassingAsserts": 2,
           "retryReasons": [],
-          "startAt": 1757782944501,
+          "startAt": 1757783480696,
           "status": "passed",
           "title": "短地址应该原样返回"
         },
@@ -1097,7 +1097,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782944502,
+          "startAt": 1757783480697,
           "status": "passed",
           "title": "空字符串应该返回空字符串"
         },
@@ -1116,7 +1116,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782944502,
+          "startAt": 1757783480697,
           "status": "passed",
           "title": "null应该返回空字符串"
         },
@@ -1135,7 +1135,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782944502,
+          "startAt": 1757783480697,
           "status": "passed",
           "title": "undefined应该返回空字符串"
         },
@@ -1154,7 +1154,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782944502,
+          "startAt": 1757783480697,
           "status": "passed",
           "title": "只有空格的字符串应该按照长度处理"
         },
@@ -1173,7 +1173,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782944502,
+          "startAt": 1757783480697,
           "status": "passed",
           "title": "长度正好为10的地址应该原样返回"
         },
@@ -1192,7 +1192,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782944502,
+          "startAt": 1757783480697,
           "status": "passed",
           "title": "格式化结果应该包含省略号"
         },
@@ -1211,7 +1211,7 @@
           "location": null,
           "numPassingAsserts": 2,
           "retryReasons": [],
-          "startAt": 1757782944502,
+          "startAt": 1757783480697,
           "status": "passed",
           "title": "格式化结果的前缀和后缀应该正确"
         },
@@ -1230,7 +1230,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782944502,
+          "startAt": 1757783480697,
           "status": "passed",
           "title": "有效URL应该返回true"
         },
@@ -1240,29 +1240,17 @@
             "isValidImageUrl 函数测试",
             "基本功能测试"
           ],
-          "duration": 2,
+          "duration": 1,
           "failing": false,
-          "failureDetails": [
-            {
-              "matcherResult": {
-                "actual": true,
-                "expected": false,
-                "message": "expect(received).toBe(expected) // Object.is equality\n\nExpected: false\nReceived: true",
-                "name": "toBe",
-                "pass": false
-              }
-            }
-          ],
-          "failureMessages": [
-            "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: false\nReceived: true\n    at Object.<anonymous> (/media/jzq520cxm/32C4F0C5C4F08C7B/yidengschool/ai-spa/tests/unit/avatarGenerator.spec.ts:184:45)"
-          ],
+          "failureDetails": [],
+          "failureMessages": [],
           "fullName": "avatarGenerator 工具函数测试 isValidImageUrl 函数测试 基本功能测试 无效URL应该返回false",
           "invocations": 1,
           "location": null,
-          "numPassingAsserts": 0,
+          "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782944503,
-          "status": "failed",
+          "startAt": 1757783480698,
+          "status": "passed",
           "title": "无效URL应该返回false"
         },
         {
@@ -1271,7 +1259,7 @@
             "isValidImageUrl 函数测试",
             "边界情况测试"
           ],
-          "duration": 1,
+          "duration": 0,
           "failing": false,
           "failureDetails": [],
           "failureMessages": [],
@@ -1280,7 +1268,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782944509,
+          "startAt": 1757783480699,
           "status": "passed",
           "title": "空字符串应该返回false"
         },
@@ -1299,7 +1287,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782944510,
+          "startAt": 1757783480699,
           "status": "passed",
           "title": "null应该返回false"
         },
@@ -1318,7 +1306,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782944510,
+          "startAt": 1757783480699,
           "status": "passed",
           "title": "undefined应该返回false"
         },
@@ -1337,7 +1325,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782944510,
+          "startAt": 1757783480699,
           "status": "passed",
           "title": "非字符串类型应该返回false"
         },
@@ -1346,7 +1334,7 @@
             "avatarGenerator 工具函数测试",
             "isValidImageUrl 函数测试"
           ],
-          "duration": 5000,
+          "duration": 5001,
           "failing": false,
           "failureDetails": [],
           "failureMessages": [],
@@ -1355,28 +1343,9 @@
           "location": null,
           "numPassingAsserts": 2,
           "retryReasons": [],
-          "startAt": 1757782944510,
+          "startAt": 1757783480699,
           "status": "passed",
           "title": "应该在5秒后超时"
-        },
-        {
-          "ancestorTitles": [
-            "avatarGenerator 工具函数测试",
-            "内部辅助函数间接测试",
-            "getColorsFromAddress 间接测试"
-          ],
-          "duration": 0,
-          "failing": false,
-          "failureDetails": [],
-          "failureMessages": [],
-          "fullName": "avatarGenerator 工具函数测试 内部辅助函数间接测试 getColorsFromAddress 间接测试 相同地址应该生成相同颜色的头像",
-          "invocations": 1,
-          "location": null,
-          "numPassingAsserts": 1,
-          "retryReasons": [],
-          "startAt": 1757782949510,
-          "status": "passed",
-          "title": "相同地址应该生成相同颜色的头像"
         },
         {
           "ancestorTitles": [
@@ -1388,12 +1357,31 @@
           "failing": false,
           "failureDetails": [],
           "failureMessages": [],
+          "fullName": "avatarGenerator 工具函数测试 内部辅助函数间接测试 getColorsFromAddress 间接测试 相同地址应该生成相同颜色的头像",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 1,
+          "retryReasons": [],
+          "startAt": 1757783485700,
+          "status": "passed",
+          "title": "相同地址应该生成相同颜色的头像"
+        },
+        {
+          "ancestorTitles": [
+            "avatarGenerator 工具函数测试",
+            "内部辅助函数间接测试",
+            "getColorsFromAddress 间接测试"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
           "fullName": "avatarGenerator 工具函数测试 内部辅助函数间接测试 getColorsFromAddress 间接测试 不同地址应该生成不同颜色的头像",
           "invocations": 1,
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782949510,
+          "startAt": 1757783485701,
           "status": "passed",
           "title": "不同地址应该生成不同颜色的头像"
         },
@@ -1412,7 +1400,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782949511,
+          "startAt": 1757783485701,
           "status": "passed",
           "title": "短地址应该使用默认颜色（通过返回空字符串体现）"
         },
@@ -1431,7 +1419,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782949511,
+          "startAt": 1757783485701,
           "status": "passed",
           "title": "生成的SVG应该包含正确的首字母"
         },
@@ -1450,7 +1438,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782949511,
+          "startAt": 1757783485701,
           "status": "passed",
           "title": "不带0x前缀的地址应该使用正确的首字母"
         },
@@ -1460,7 +1448,7 @@
             "内部辅助函数间接测试",
             "getInitials 间接测试"
           ],
-          "duration": 0,
+          "duration": 1,
           "failing": false,
           "failureDetails": [],
           "failureMessages": [],
@@ -1469,7 +1457,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782949511,
+          "startAt": 1757783485701,
           "status": "passed",
           "title": "过短地址应该返回空字符串而不是??"
         },
@@ -1488,7 +1476,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782949511,
+          "startAt": 1757783485702,
           "status": "passed",
           "title": "地址长度恰好为6时应该生成头像"
         },
@@ -1507,7 +1495,7 @@
           "location": null,
           "numPassingAsserts": 2,
           "retryReasons": [],
-          "startAt": 1757782949511,
+          "startAt": 1757783485702,
           "status": "passed",
           "title": "不带0x前缀但长度不足12的地址应该使用默认颜色"
         },
@@ -1517,7 +1505,7 @@
             "内部辅助函数间接测试",
             "边界条件覆盖测试"
           ],
-          "duration": 1,
+          "duration": 0,
           "failing": false,
           "failureDetails": [],
           "failureMessages": [],
@@ -1526,7 +1514,7 @@
           "location": null,
           "numPassingAsserts": 2,
           "retryReasons": [],
-          "startAt": 1757782949511,
+          "startAt": 1757783485702,
           "status": "passed",
           "title": "地址长度正好12位应该使用完整颜色"
         },
@@ -1545,7 +1533,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782949512,
+          "startAt": 1757783485702,
           "status": "passed",
           "title": "空白字符串应该被处理"
         },
@@ -1564,7 +1552,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782949512,
+          "startAt": 1757783485702,
           "status": "passed",
           "title": "长度恰好为4的地址应该返回空字符串"
         },
@@ -1573,7 +1561,7 @@
             "avatarGenerator 工具函数测试",
             "getColorsFromAddress 函数边界测试"
           ],
-          "duration": 0,
+          "duration": 1,
           "failing": false,
           "failureDetails": [],
           "failureMessages": [],
@@ -1582,7 +1570,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782949512,
+          "startAt": 1757783485702,
           "status": "passed",
           "title": "null值应该返回默认颜色"
         },
@@ -1600,7 +1588,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782949512,
+          "startAt": 1757783485703,
           "status": "passed",
           "title": "非字符串类型应该返回默认颜色"
         },
@@ -1618,7 +1606,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782949512,
+          "startAt": 1757783485703,
           "status": "passed",
           "title": "null值应该返回??"
         },
@@ -1636,7 +1624,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782949512,
+          "startAt": 1757783485703,
           "status": "passed",
           "title": "非字符串类型应该返回??"
         },
@@ -1654,7 +1642,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782949512,
+          "startAt": 1757783485703,
           "status": "passed",
           "title": "长度恰好为endIndex的边界情况"
         },
@@ -1663,7 +1651,7 @@
             "avatarGenerator 工具函数测试",
             "getColorsFromAddress完整分支覆盖"
           ],
-          "duration": 0,
+          "duration": 1,
           "failing": false,
           "failureDetails": [],
           "failureMessages": [],
@@ -1672,7 +1660,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782949512,
+          "startAt": 1757783485703,
           "status": "passed",
           "title": "空字符串应该触发默认颜色分支"
         },
@@ -1690,7 +1678,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782949512,
+          "startAt": 1757783485704,
           "status": "passed",
           "title": "非字符串null应该触发默认颜色分支"
         },
@@ -1699,7 +1687,7 @@
             "avatarGenerator 工具函数测试",
             "getColorsFromAddress完整分支覆盖"
           ],
-          "duration": 1,
+          "duration": 0,
           "failing": false,
           "failureDetails": [],
           "failureMessages": [],
@@ -1708,7 +1696,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782949512,
+          "startAt": 1757783485704,
           "status": "passed",
           "title": "非字符串undefined应该触发默认颜色分支"
         },
@@ -1719,27 +1707,15 @@
           ],
           "duration": 0,
           "failing": false,
-          "failureDetails": [
-            {
-              "matcherResult": {
-                "actual": "data:image/svg+xml;base64,CiAgICA8c3ZnIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDQwIDQwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogICAgICA8ZGVmcz4KICAgICAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImdyYWQtMTIzNDUiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPgogICAgICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzY2NjY2NjtzdG9wLW9wYWNpdHk6MSIgLz4KICAgICAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6Izk5OTk5OTtzdG9wLW9wYWNpdHk6MSIgLz4KICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgICA8L2RlZnM+CiAgICAgIDxjaXJjbGUgY3g9IjIwIiBjeT0iMjAiIHI9IjIwIiBmaWxsPSJ1cmwoI2dyYWQtMTIzNDUpIiAvPgogICAgICA8dGV4dCB4PSIyMCIgeT0iMjYiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNiIgZm9udC13ZWlnaHQ9ImJvbGQiIAogICAgICAgICAgICB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSI+CiAgICAgICAgMTIKICAgICAgPC90ZXh0PgogICAgPC9zdmc+CiAg",
-                "expected": "",
-                "message": "expect(received).toBe(expected) // Object.is equality\n\nExpected: \"\"\nReceived: \"data:image/svg+xml;base64,CiAgICA8c3ZnIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDQwIDQwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogICAgICA8ZGVmcz4KICAgICAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImdyYWQtMTIzNDUiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPgogICAgICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzY2NjY2NjtzdG9wLW9wYWNpdHk6MSIgLz4KICAgICAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6Izk5OTk5OTtzdG9wLW9wYWNpdHk6MSIgLz4KICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgICA8L2RlZnM+CiAgICAgIDxjaXJjbGUgY3g9IjIwIiBjeT0iMjAiIHI9IjIwIiBmaWxsPSJ1cmwoI2dyYWQtMTIzNDUpIiAvPgogICAgICA8dGV4dCB4PSIyMCIgeT0iMjYiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNiIgZm9udC13ZWlnaHQ9ImJvbGQiIAogICAgICAgICAgICB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSI+CiAgICAgICAgMTIKICAgICAgPC90ZXh0PgogICAgPC9zdmc+CiAg\"",
-                "name": "toBe",
-                "pass": false
-              }
-            }
-          ],
-          "failureMessages": [
-            "Error: expect(received).toBe(expected) // Object.is equality\n\nExpected: \"\"\nReceived: \"data:image/svg+xml;base64,CiAgICA8c3ZnIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDQwIDQwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogICAgICA8ZGVmcz4KICAgICAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImdyYWQtMTIzNDUiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPgogICAgICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzY2NjY2NjtzdG9wLW9wYWNpdHk6MSIgLz4KICAgICAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6Izk5OTk5OTtzdG9wLW9wYWNpdHk6MSIgLz4KICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgICA8L2RlZnM+CiAgICAgIDxjaXJjbGUgY3g9IjIwIiBjeT0iMjAiIHI9IjIwIiBmaWxsPSJ1cmwoI2dyYWQtMTIzNDUpIiAvPgogICAgICA8dGV4dCB4PSIyMCIgeT0iMjYiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNiIgZm9udC13ZWlnaHQ9ImJvbGQiIAogICAgICAgICAgICB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSI+CiAgICAgICAgMTIKICAgICAgPC90ZXh0PgogICAgPC9zdmc+CiAg\"\n    at Object.generateGradientAvatar (/media/jzq520cxm/32C4F0C5C4F08C7B/yidengschool/ai-spa/tests/unit/avatarGenerator.spec.ts:378:22)\n    at Promise.finally.completed (/media/jzq520cxm/32C4F0C5C4F08C7B/yidengschool/ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1556:28)\n    at new Promise (<anonymous>)\n    at callAsyncCircusFn (/media/jzq520cxm/32C4F0C5C4F08C7B/yidengschool/ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1496:10)\n    at _callCircusTest (/media/jzq520cxm/32C4F0C5C4F08C7B/yidengschool/ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1006:40)\n    at _runTest (/media/jzq520cxm/32C4F0C5C4F08C7B/yidengschool/ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:946:3)\n    at _runTestsForDescribeBlock (/media/jzq520cxm/32C4F0C5C4F08C7B/yidengschool/ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:839:13)\n    at _runTestsForDescribeBlock (/media/jzq520cxm/32C4F0C5C4F08C7B/yidengschool/ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at _runTestsForDescribeBlock (/media/jzq520cxm/32C4F0C5C4F08C7B/yidengschool/ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:829:11)\n    at run (/media/jzq520cxm/32C4F0C5C4F08C7B/yidengschool/ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:757:3)\n    at runAndTransformResultsToJestFormat (/media/jzq520cxm/32C4F0C5C4F08C7B/yidengschool/ai-spa/node_modules/jest-circus/build/jestAdapterInit.js:1917:21)\n    at jestAdapter (/media/jzq520cxm/32C4F0C5C4F08C7B/yidengschool/ai-spa/node_modules/jest-circus/build/runner.js:101:19)\n    at runTestInternal (/media/jzq520cxm/32C4F0C5C4F08C7B/yidengschool/ai-spa/node_modules/jest-runner/build/testWorker.js:275:16)\n    at runTest (/media/jzq520cxm/32C4F0C5C4F08C7B/yidengschool/ai-spa/node_modules/jest-runner/build/testWorker.js:343:7)\n    at Object.worker (/media/jzq520cxm/32C4F0C5C4F08C7B/yidengschool/ai-spa/node_modules/jest-runner/build/testWorker.js:497:12)"
-          ],
+          "failureDetails": [],
+          "failureMessages": [],
           "fullName": "avatarGenerator 工具函数测试 getColorsFromAddress完整分支覆盖 带0x前缀但hash长度小于12应该使用默认颜色",
           "invocations": 1,
           "location": null,
-          "numPassingAsserts": 0,
+          "numPassingAsserts": 3,
           "retryReasons": [],
-          "startAt": 1757782949513,
-          "status": "failed",
+          "startAt": 1757783485704,
+          "status": "passed",
           "title": "带0x前缀但hash长度小于12应该使用默认颜色"
         },
         {
@@ -1747,16 +1723,16 @@
             "avatarGenerator 工具函数测试",
             "getColorsFromAddress完整分支覆盖"
           ],
-          "duration": 0,
+          "duration": 1,
           "failing": false,
           "failureDetails": [],
           "failureMessages": [],
           "fullName": "avatarGenerator 工具函数测试 getColorsFromAddress完整分支覆盖 不带0x前缀且长度小于12应该使用默认颜色",
           "invocations": 1,
           "location": null,
-          "numPassingAsserts": 1,
+          "numPassingAsserts": 3,
           "retryReasons": [],
-          "startAt": 1757782949514,
+          "startAt": 1757783485704,
           "status": "passed",
           "title": "不带0x前缀且长度小于12应该使用默认颜色"
         },
@@ -1774,7 +1750,7 @@
           "location": null,
           "numPassingAsserts": 3,
           "retryReasons": [],
-          "startAt": 1757782949514,
+          "startAt": 1757783485705,
           "status": "passed",
           "title": "不带0x前缀且长度正好12应该正常生成"
         },
@@ -1792,7 +1768,7 @@
           "location": null,
           "numPassingAsserts": 3,
           "retryReasons": [],
-          "startAt": 1757782949514,
+          "startAt": 1757783485705,
           "status": "passed",
           "title": "带0x前缀且去掉前缀后长度大于12应该正常生成"
         },
@@ -1810,7 +1786,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782949514,
+          "startAt": 1757783485705,
           "status": "passed",
           "title": "cleanAddress长度小于4应该返回??（通过formatAddress测试）"
         },
@@ -1828,7 +1804,7 @@
           "location": null,
           "numPassingAsserts": 1,
           "retryReasons": [],
-          "startAt": 1757782949514,
+          "startAt": 1757783485705,
           "status": "passed",
           "title": "cleanAddress长度正好等于endIndex应该返回??"
         },
@@ -1846,12 +1822,102 @@
           "location": null,
           "numPassingAsserts": 2,
           "retryReasons": [],
-          "startAt": 1757782949515,
+          "startAt": 1757783485705,
           "status": "passed",
           "title": "测试getInitials中的startIndex计算"
+        },
+        {
+          "ancestorTitles": [
+            "avatarGenerator 工具函数测试",
+            "getInitials完整分支覆盖"
+          ],
+          "duration": 1,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "avatarGenerator 工具函数测试 getInitials完整分支覆盖 测试getInitials中cleanAddress.length <= endIndex的情况",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1757783485705,
+          "status": "passed",
+          "title": "测试getInitials中cleanAddress.length <= endIndex的情况"
+        },
+        {
+          "ancestorTitles": [
+            "avatarGenerator 工具函数测试",
+            "getInitials完整分支覆盖"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "avatarGenerator 工具函数测试 getInitials完整分支覆盖 测试getInitials函数处理null和非字符串",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 3,
+          "retryReasons": [],
+          "startAt": 1757783485706,
+          "status": "passed",
+          "title": "测试getInitials函数处理null和非字符串"
+        },
+        {
+          "ancestorTitles": [
+            "avatarGenerator 工具函数测试",
+            "getInitials完整分支覆盖"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "avatarGenerator 工具函数测试 getInitials完整分支覆盖 测试getColorsFromAddress中的边界情况",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 6,
+          "retryReasons": [],
+          "startAt": 1757783485706,
+          "status": "passed",
+          "title": "测试getColorsFromAddress中的边界情况"
+        },
+        {
+          "ancestorTitles": [
+            "avatarGenerator 工具函数测试",
+            "getInitials完整分支覆盖"
+          ],
+          "duration": 0,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "avatarGenerator 工具函数测试 getInitials完整分支覆盖 测试可能触发内部函数返回??的特殊情况",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 2,
+          "retryReasons": [],
+          "startAt": 1757783485706,
+          "status": "passed",
+          "title": "测试可能触发内部函数返回??的特殊情况"
+        },
+        {
+          "ancestorTitles": [
+            "avatarGenerator 工具函数测试",
+            "getInitials完整分支覆盖"
+          ],
+          "duration": 2,
+          "failing": false,
+          "failureDetails": [],
+          "failureMessages": [],
+          "fullName": "avatarGenerator 工具函数测试 getInitials完整分支覆盖 系统性测试所有长度和格式组合",
+          "invocations": 1,
+          "location": null,
+          "numPassingAsserts": 44,
+          "retryReasons": [],
+          "startAt": 1757783485706,
+          "status": "passed",
+          "title": "系统性测试所有长度和格式组合"
         }
       ],
-      "failureMessage": "  ● avatarGenerator 工具函数测试 › isValidImageUrl 函数测试 › 基本功能测试 › 无效URL应该返回false\n\n    expect(received).toBe(expected) // Object.is equality\n\n    Expected: false\n    Received: true\n\n      182 |\n      183 |       test('无效URL应该返回false', async () => {\n    > 184 |         const result = await isValidImageUrl('https://invalid-url.com/invalid-image.jpg');\n          |                                             ^\n      185 |         expect(result).toBe(false);\n      186 |       });\n      187 |     });\n\n      at Object.<anonymous> (tests/unit/avatarGenerator.spec.ts:184:45)\n\n  ● avatarGenerator 工具函数测试 › getColorsFromAddress完整分支覆盖 › 带0x前缀但hash长度小于12应该使用默认颜色\n\n    expect(received).toBe(expected) // Object.is equality\n\n    Expected: \"\"\n    Received: \"data:image/svg+xml;base64,CiAgICA8c3ZnIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDQwIDQwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogICAgICA8ZGVmcz4KICAgICAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImdyYWQtMTIzNDUiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPgogICAgICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzY2NjY2NjtzdG9wLW9wYWNpdHk6MSIgLz4KICAgICAgICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6Izk5OTk5OTtzdG9wLW9wYWNpdHk6MSIgLz4KICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgICA8L2RlZnM+CiAgICAgIDxjaXJjbGUgY3g9IjIwIiBjeT0iMjAiIHI9IjIwIiBmaWxsPSJ1cmwoI2dyYWQtMTIzNDUpIiAvPgogICAgICA8dGV4dCB4PSIyMCIgeT0iMjYiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNiIgZm9udC13ZWlnaHQ9ImJvbGQiIAogICAgICAgICAgICB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSI+CiAgICAgICAgMTIKICAgICAgPC90ZXh0PgogICAgPC9zdmc+CiAg\"\n\n      376 |\n      377 |     test('带0x前缀但hash长度小于12应该使用默认颜色', () => {\n    > 378 |       const result = generateGradientAvatar('0x12345'); // 去掉0x后只有5位\n          |                      ^\n      379 |       expect(result).toBe('');\n      380 |     });\n      381 |\n\n      at Object.generateGradientAvatar (tests/unit/avatarGenerator.spec.ts:378:22)\n"
+      "failureMessage": null
     }
   ],
   "wasInterrupted": false
