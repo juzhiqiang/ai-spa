@@ -6,6 +6,7 @@ module.exports = {
     '.(ts|tsx)': '@swc/jest',
   },
   moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/src/$1',
     '^@utils(.*)$': '<rootDir>/src/utils$1',
   },
   coverageThreshold: {

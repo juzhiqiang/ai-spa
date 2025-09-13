@@ -1,20 +1,23 @@
 // Web3 EVM 钱包地址格式化函数
 export const formatWalletAddress = (
-  address: string,
-  startLength: number = 6,
-  endLength: number = 4,
+    address: string,
+    startLength: number = 6,
+    endLength: number = 4,
 ): string => {
-  if (!address) return '';
-  // 检查地址长度是否足够进行格式化
-  if (address.length <= startLength + endLength) {
-    return address;
-  }
-  // 移除可能的前缀
-  const cleanAddress = address.startsWith('0x') ? address.slice(2) : address;
-  // 获取起始和结束部分
-  const start = cleanAddress.slice(0, startLength);
-  const end = cleanAddress.slice(-endLength);
-  // 如果原地址有0x前缀，添加回去
-  const prefix = address.startsWith('0x') ? '0x' : '';
-  return `${prefix}${start}...${end}`;
+    if (!address) return '';
+    // 处理负数参数
+    const safeStartLength = Math.max(0, startLength);
+    const safeEndLength = Math.max(0, endLength);
+    // 检查地址长度是否足够进行格式化
+    if (address.length <= safeStartLength + safeEndLength) {
+        return address;
+    }
+    // 移除可能的前缀
+    const cleanAddress = address.startsWith('0x') ? address.slice(2) : address;
+    // 获取起始和结束部分
+    const start = cleanAddress.slice(0, safeStartLength);
+    const end = safeEndLength > 0 ? cleanAddress.slice(-safeEndLength) : '';
+    // 如果原地址有0x前缀，添加回去
+    const prefix = address.startsWith('0x') ? '0x' : '';
+    return `${prefix}${start}...${end}`;
 };
