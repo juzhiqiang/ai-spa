@@ -4,7 +4,7 @@ describe('Red Packet DApp - Comprehensive E2E Tests', () => {
   const MOCK_USER2_ADDRESS = '0x9876543210987654321098765432109876543210';
 
   beforeEach(() => {
-    cy.visit('/');
+   cy.visit('http://localhost:3000/');
   });
 
   describe('Initial Application State', () => {

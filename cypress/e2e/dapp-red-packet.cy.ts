@@ -5,8 +5,8 @@ describe('Red Packet DApp End-to-End Tests', () => {
 
   beforeEach(() => {
     // 访问应用首页
-    cy.visit('/');
-
+    cy.visit('http://localhost:3000/');
+    
     // Mock window.ethereum (MetaMask)
     cy.window().then((win) => {
       // 创建模拟的 MetaMask provider
