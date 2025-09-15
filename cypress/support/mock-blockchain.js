@@ -262,7 +262,7 @@ Cypress.Commands.add('setupMockBlockchain', (config = {}) => {
       _triggerEvent: (eventName, ...args) => {
         triggerEvent(eventHandlers, eventName, ...args);
       }
-    });
+    };
 
     console.log('Mock ethereum provider setup complete:', win.ethereum);
 

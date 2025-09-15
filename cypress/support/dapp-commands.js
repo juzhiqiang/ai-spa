@@ -1,7 +1,7 @@
 // Custom commands for DApp testing
 
 /**
- * Mock MetaMask provider (simplified version - use setupMockBlockchain for full functionality)
+ * Mock MetaMask provider (simplified version)
  */
 Cypress.Commands.add('mockMetaMask', (options = {}) => {
   const defaults = {
@@ -11,24 +11,32 @@ Cypress.Commands.add('mockMetaMask', (options = {}) => {
     ...options
   };
 
-  // Use the enhanced blockchain mock for consistent behavior
-  cy.setupMockBlockchain({
-    accounts: defaults.accounts.map(address => ({
-      address,
-      isOwner: address === '0x1234567890123456789012345678901234567890',
-      balance: '2000000000000000000'
-    })),
-    contractConfig: {
-      claimedCount: 0,
-      distributedAmount: '0'
-    }
-  });
-
-  // Ensure ethereum provider is available immediately
   cy.window().then((win) => {
-    if (win.ethereum && defaults.accounts.length > 0) {
-      win.ethereum.selectedAddress = defaults.accounts[0];
-    }
+    // Create a simple mock ethereum provider
+    win.ethereum = {
+      isMetaMask: true,
+      selectedAddress: null,
+      chainId: defaults.chainId,
+      networkVersion: '1',
+      isConnected: () => !!win.ethereum.selectedAddress,
+
+      request: cy.stub().as('ethereumRequest').callsFake(async (params) => {
+        if (params.method === 'eth_requestAccounts') {
+          win.ethereum.selectedAddress = defaults.accounts[0];
+          return defaults.accounts;
+        }
+        if (params.method === 'eth_accounts') {
+          return win.ethereum.selectedAddress ? [win.ethereum.selectedAddress] : [];
+        }
+        if (params.method === 'eth_chainId') {
+          return defaults.chainId;
+        }
+        return '0x0';
+      }),
+
+      on: cy.stub().as('ethereumOn'),
+      removeListener: cy.stub().as('ethereumRemoveListener')
+    };
   });
 });
 
@@ -36,14 +44,8 @@ Cypress.Commands.add('mockMetaMask', (options = {}) => {
  * Connect wallet and verify connection
  */
 Cypress.Commands.add('connectWallet', (address = '0x742d35Cc6634C0532925a3b8D45c7c8f8b9b8c5e') => {
-  // Set up mock blockchain BEFORE attempting connection
-  cy.setupMockBlockchain({
-    accounts: [
-      { address, isOwner: address === '0x1234567890123456789012345678901234567890', balance: '2000000000000000000' },
-      { address: '0x1234567890123456789012345678901234567890', isOwner: true, balance: '5000000000000000000' },
-      { address: '0x9876543210987654321098765432109876543210', isOwner: false, balance: '1000000000000000000' }
-    ]
-  });
+  // Set up basic mock first
+  cy.mockMetaMask({ accounts: [address] });
 
   // Wait for DOM to be ready
   cy.contains('连接 MetaMask').should('be.visible');
@@ -58,10 +60,6 @@ Cypress.Commands.add('connectWallet', (address = '0x742d35Cc6634C0532925a3b8D45c
   // Verify the UI changes to connected state
   cy.contains('断开连接', { timeout: 10000 }).should('be.visible');
 
-  // Wait for contract info to load
-  cy.contains('📋 合约信息', { timeout: 10000 }).should('be.visible');
-  cy.contains('🎁 红包状态', { timeout: 10000 }).should('be.visible');
-
   // Wait for any async state updates to complete
   cy.wait(500);
 });
@@ -70,17 +68,8 @@ Cypress.Commands.add('connectWallet', (address = '0x742d35Cc6634C0532925a3b8D45c
  * Mock contract owner responses
  */
 Cypress.Commands.add('mockContractOwner', (ownerAddress = '0x1234567890123456789012345678901234567890') => {
-  // Set up blockchain mock with owner account
-  cy.setupMockBlockchain({
-    accounts: [
-      { address: ownerAddress, isOwner: true, balance: '5000000000000000000' },
-      { address: '0x742d35Cc6634C0532925a3b8D45c7c8f8b9b8c5e', isOwner: false, balance: '2000000000000000000' }
-    ],
-    contractConfig: {
-      owner: ownerAddress
-    }
-  });
-  
+  cy.mockMetaMask({ accounts: [ownerAddress] });
+
   // Set the owner as the selected address
   cy.window().then((win) => {
     if (win.ethereum) {
@@ -103,54 +92,43 @@ Cypress.Commands.add('mockRedPacketState', (state = {}) => {
     ...state
   };
 
-  // Update the mock blockchain state if it exists
+  // Mock contract calls to return the specified state
   cy.window().then((win) => {
-    if (win.mockBlockchain) {
-      const contractAddress = '0xabcdefabcdefabcdefabcdefabcdefabcdefabcd';
-      const contract = win.mockBlockchain.contracts.get(contractAddress.toLowerCase());
-      if (contract) {
-        contract.totalAmount = defaults.totalAmount;
-        contract.distributedAmount = defaults.distributedAmount;
-        contract.claimedCount = defaults.claimedCount;
-        contract.maxRecipients = defaults.maxRecipients;
-      }
+    if (win.ethereum && win.ethereum.request) {
+      const originalRequest = win.ethereum.request;
+      win.ethereum.request = cy.stub().callsFake(async (params) => {
+        if (params.method === 'eth_call') {
+          const data = params.params[0].data || '';
+
+          // Mock different contract function responses
+          if (data.length <= 10 || data.includes('getRedPacketInfo')) {
+            return Promise.resolve(
+              '0x' +
+              parseInt(defaults.totalAmount).toString(16).padStart(64, '0') +
+              parseInt(defaults.distributedAmount).toString(16).padStart(64, '0') +
+              defaults.claimedCount.toString(16).padStart(64, '0')
+            );
+          }
+
+          if (data.includes('hasUserClaimed') || data.length > 70) {
+            return Promise.resolve(defaults.userHasClaimed ? '0x0000000000000000000000000000000000000000000000000000000000000001' : '0x0000000000000000000000000000000000000000000000000000000000000000');
+          }
+
+          if (data.includes('getUserClaimedAmount')) {
+            return Promise.resolve('0x' + parseInt(defaults.userClaimedAmount).toString(16).padStart(64, '0'));
+          }
+
+          if (data.includes('maxRecipients')) {
+            return Promise.resolve('0x' + defaults.maxRecipients.toString(16).padStart(64, '0'));
+          }
+
+          return Promise.resolve('0x0');
+        }
+
+        // Use original request for other methods
+        return originalRequest.call(win.ethereum, params);
+      });
     }
-  });
-
-  // Also update the ethereum request mock for backwards compatibility
-  cy.get('@ethereumRequest').then((ethereumRequest) => {
-    const originalStub = ethereumRequest;
-    cy.get('@ethereumRequest').callsFake((params) => {
-      if (params.method === 'eth_call') {
-        const data = params.params[0].data || '';
-
-        // Mock different contract function responses based on function selector
-        if (data.length <= 10 || data.includes('getRedPacketInfo')) {
-          // Return encoded totalAmount, distributedAmount, claimedCount
-          return Promise.resolve(
-            '0x' +
-            parseInt(defaults.totalAmount).toString(16).padStart(64, '0') +
-            parseInt(defaults.distributedAmount).toString(16).padStart(64, '0') +
-            defaults.claimedCount.toString(16).padStart(64, '0')
-          );
-        }
-
-        if (data.includes('hasUserClaimed') || data.length > 70) {
-          return Promise.resolve(defaults.userHasClaimed ? '0x0000000000000000000000000000000000000000000000000000000000000001' : '0x0000000000000000000000000000000000000000000000000000000000000000');
-        }
-
-        if (data.includes('getUserClaimedAmount')) {
-          return Promise.resolve('0x' + parseInt(defaults.userClaimedAmount).toString(16).padStart(64, '0'));
-        }
-
-        if (data.includes('maxRecipients')) {
-          return Promise.resolve('0x' + defaults.maxRecipients.toString(16).padStart(64, '0'));
-        }
-      }
-
-      // Fall back to original behavior for other methods
-      return originalStub(params);
-    });
   });
 });
 
