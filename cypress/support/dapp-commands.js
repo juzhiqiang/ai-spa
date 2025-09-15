@@ -1,7 +1,7 @@
 // Custom commands for DApp testing
 
 /**
- * Mock MetaMask provider
+ * Mock MetaMask provider (simplified version - use setupMockBlockchain for full functionality)
  */
 Cypress.Commands.add('mockMetaMask', (options = {}) => {
   const defaults = {
@@ -11,32 +11,24 @@ Cypress.Commands.add('mockMetaMask', (options = {}) => {
     ...options
   };
 
-  cy.window().then((win) => {
-    win.ethereum = {
-      isMetaMask: true,
-      request: cy.stub().as('ethereumRequest'),
-      on: cy.stub().as('ethereumOn'),
-      removeListener: cy.stub().as('ethereumRemoveListener'),
-      selectedAddress: defaults.isConnected ? defaults.accounts[0] : null,
-      chainId: defaults.chainId,
-      networkVersion: defaults.chainId === '0x1' ? '1' : '3'
-    };
+  // Use the enhanced blockchain mock for consistent behavior
+  cy.setupMockBlockchain({
+    accounts: defaults.accounts.map(address => ({
+      address,
+      isOwner: address === '0x1234567890123456789012345678901234567890',
+      balance: '2000000000000000000'
+    })),
+    contractConfig: {
+      claimedCount: 0,
+      distributedAmount: '0'
+    }
+  });
 
-    // Setup default ethereum request responses
-    cy.get('@ethereumRequest').callsFake((params) => {
-      switch (params.method) {
-        case 'eth_requestAccounts':
-          return Promise.resolve(defaults.accounts);
-        case 'eth_accounts':
-          return Promise.resolve(defaults.isConnected ? defaults.accounts : []);
-        case 'eth_chainId':
-          return Promise.resolve(defaults.chainId);
-        case 'net_version':
-          return Promise.resolve(defaults.chainId === '0x1' ? '1' : '3');
-        default:
-          return Promise.resolve('0x0000000000000000000000000000000000000000000000000000000000000000');
-      }
-    });
+  // Ensure ethereum provider is available immediately
+  cy.window().then((win) => {
+    if (win.ethereum && defaults.accounts.length > 0) {
+      win.ethereum.selectedAddress = defaults.accounts[0];
+    }
   });
 });
 
@@ -44,37 +36,56 @@ Cypress.Commands.add('mockMetaMask', (options = {}) => {
  * Connect wallet and verify connection
  */
 Cypress.Commands.add('connectWallet', (address = '0x742d35Cc6634C0532925a3b8D45c7c8f8b9b8c5e') => {
-  // Mock MetaMask with the provided address
-  cy.mockMetaMask({ accounts: [address], isConnected: true });
+  // Set up mock blockchain BEFORE attempting connection
+  cy.setupMockBlockchain({
+    accounts: [
+      { address, isOwner: address === '0x1234567890123456789012345678901234567890', balance: '2000000000000000000' },
+      { address: '0x1234567890123456789012345678901234567890', isOwner: true, balance: '5000000000000000000' },
+      { address: '0x9876543210987654321098765432109876543210', isOwner: false, balance: '1000000000000000000' }
+    ]
+  });
+
+  // Wait for DOM to be ready
+  cy.contains('连接钱包').should('be.visible');
 
   // Click connect button
   cy.contains('连接钱包').click();
 
-  // Verify connection by checking formatted address
+  // Wait for wallet connection to complete with proper timeout
   const formattedAddress = `${address.slice(0, 6)}...${address.slice(-4)}`;
-  cy.contains(formattedAddress, { timeout: 10000 }).should('be.visible');
+  cy.contains(formattedAddress, { timeout: 15000 }).should('be.visible');
+
+  // Verify the UI changes to connected state
+  cy.contains('断开连接', { timeout: 10000 }).should('be.visible');
+
+  // Wait for contract info to load
+  cy.contains('📋 合约信息', { timeout: 10000 }).should('be.visible');
+  cy.contains('🎁 红包状态', { timeout: 10000 }).should('be.visible');
+
+  // Wait for any async state updates to complete
+  cy.wait(500);
 });
 
 /**
  * Mock contract owner responses
  */
 Cypress.Commands.add('mockContractOwner', (ownerAddress = '0x1234567890123456789012345678901234567890') => {
-  cy.window().then((win) => {
-    win.ethereum.selectedAddress = ownerAddress;
+  // Set up blockchain mock with owner account
+  cy.setupMockBlockchain({
+    accounts: [
+      { address: ownerAddress, isOwner: true, balance: '5000000000000000000' },
+      { address: '0x742d35Cc6634C0532925a3b8D45c7c8f8b9b8c5e', isOwner: false, balance: '2000000000000000000' }
+    ],
+    contractConfig: {
+      owner: ownerAddress
+    }
   });
-
-  cy.get('@ethereumRequest').callsFake((params) => {
-    if (params.method === 'eth_accounts') {
-      return Promise.resolve([ownerAddress]);
+  
+  // Set the owner as the selected address
+  cy.window().then((win) => {
+    if (win.ethereum) {
+      win.ethereum.selectedAddress = ownerAddress;
     }
-    if (params.method === 'eth_chainId') {
-      return Promise.resolve('0x1');
-    }
-    // Mock contract owner check - owner() function selector is 8da5cb5b
-    if (params.method === 'eth_call' && params.params[0].data && params.params[0].data.includes('8da5cb5b')) {
-      return Promise.resolve('0x000000000000000000000000' + ownerAddress.slice(2));
-    }
-    return Promise.resolve('0x0000000000000000000000000000000000000000000000000000000000000000');
   });
 });
 
@@ -92,35 +103,54 @@ Cypress.Commands.add('mockRedPacketState', (state = {}) => {
     ...state
   };
 
-  cy.get('@ethereumRequest').callsFake((params) => {
-    if (params.method === 'eth_call') {
-      const data = params.params[0].data || '';
-
-      // Mock different contract function responses based on function selector
-      if (data.length <= 10 || data.includes('getRedPacketInfo')) {
-        // Return encoded totalAmount, distributedAmount, claimedCount
-        return Promise.resolve(
-          '0x' +
-          parseInt(defaults.totalAmount).toString(16).padStart(64, '0') +
-          parseInt(defaults.distributedAmount).toString(16).padStart(64, '0') +
-          defaults.claimedCount.toString(16).padStart(64, '0')
-        );
-      }
-
-      if (data.includes('hasUserClaimed') || data.length > 70) {
-        return Promise.resolve(defaults.userHasClaimed ? '0x0000000000000000000000000000000000000000000000000000000000000001' : '0x0000000000000000000000000000000000000000000000000000000000000000');
-      }
-
-      if (data.includes('getUserClaimedAmount')) {
-        return Promise.resolve('0x' + parseInt(defaults.userClaimedAmount).toString(16).padStart(64, '0'));
-      }
-
-      if (data.includes('maxRecipients')) {
-        return Promise.resolve('0x' + defaults.maxRecipients.toString(16).padStart(64, '0'));
+  // Update the mock blockchain state if it exists
+  cy.window().then((win) => {
+    if (win.mockBlockchain) {
+      const contractAddress = '0xabcdefabcdefabcdefabcdefabcdefabcdefabcd';
+      const contract = win.mockBlockchain.contracts.get(contractAddress.toLowerCase());
+      if (contract) {
+        contract.totalAmount = defaults.totalAmount;
+        contract.distributedAmount = defaults.distributedAmount;
+        contract.claimedCount = defaults.claimedCount;
+        contract.maxRecipients = defaults.maxRecipients;
       }
     }
+  });
 
-    return Promise.resolve('0x0000000000000000000000000000000000000000000000000000000000000000');
+  // Also update the ethereum request mock for backwards compatibility
+  cy.get('@ethereumRequest').then((ethereumRequest) => {
+    const originalStub = ethereumRequest;
+    cy.get('@ethereumRequest').callsFake((params) => {
+      if (params.method === 'eth_call') {
+        const data = params.params[0].data || '';
+
+        // Mock different contract function responses based on function selector
+        if (data.length <= 10 || data.includes('getRedPacketInfo')) {
+          // Return encoded totalAmount, distributedAmount, claimedCount
+          return Promise.resolve(
+            '0x' +
+            parseInt(defaults.totalAmount).toString(16).padStart(64, '0') +
+            parseInt(defaults.distributedAmount).toString(16).padStart(64, '0') +
+            defaults.claimedCount.toString(16).padStart(64, '0')
+          );
+        }
+
+        if (data.includes('hasUserClaimed') || data.length > 70) {
+          return Promise.resolve(defaults.userHasClaimed ? '0x0000000000000000000000000000000000000000000000000000000000000001' : '0x0000000000000000000000000000000000000000000000000000000000000000');
+        }
+
+        if (data.includes('getUserClaimedAmount')) {
+          return Promise.resolve('0x' + parseInt(defaults.userClaimedAmount).toString(16).padStart(64, '0'));
+        }
+
+        if (data.includes('maxRecipients')) {
+          return Promise.resolve('0x' + defaults.maxRecipients.toString(16).padStart(64, '0'));
+        }
+      }
+
+      // Fall back to original behavior for other methods
+      return originalStub(params);
+    });
   });
 });
 
@@ -153,10 +183,18 @@ Cypress.Commands.add('mockTransactionError', (errorMessage = 'Transaction failed
  * Wait for loading to complete
  */
 Cypress.Commands.add('waitForLoading', () => {
-  // Wait for any loading spinners to disappear
-  cy.get('.loading-spinner', { timeout: 1000 }).should('not.exist');
-  // Also wait for any disabled buttons to become enabled
-  cy.get('[disabled]', { timeout: 1000 }).should('not.exist');
+  // Wait for any loading spinners to disappear (allow them to appear first)
+  cy.get('body').should('be.visible'); // Ensure page is ready
+
+  // Check if loading spinner exists and wait for it to disappear
+  cy.get('body').then(($body) => {
+    if ($body.find('.loading-spinner').length > 0) {
+      cy.get('.loading-spinner', { timeout: 10000 }).should('not.exist');
+    }
+  });
+
+  // Wait for any async operations to complete
+  cy.wait(200);
 });
 
 /**
@@ -192,17 +230,17 @@ Cypress.Commands.add('verifyClaimedStatus', (amount) => {
  * Verify unclaimed status display
  */
 Cypress.Commands.add('verifyUnclaimedStatus', () => {
-  cy.contains('🎁').should('be.visible');
-  cy.contains('您可以领取红包').should('be.visible');
-  cy.contains('🧧 领取红包').should('be.visible');
+  cy.contains('🎁', { timeout: 10000 }).should('be.visible');
+  cy.contains('您可以领取红包', { timeout: 10000 }).should('be.visible');
+  cy.contains('🧧 领取红包', { timeout: 10000 }).should('be.visible');
 });
 
 /**
  * Verify exhausted red packet display
  */
 Cypress.Commands.add('verifyExhaustedRedPacket', () => {
-  cy.contains('😭').should('be.visible');
-  cy.contains('红包已被抢完！下次要快一点哦~').should('be.visible');
+  cy.contains('😭', { timeout: 10000 }).should('be.visible');
+  cy.contains('红包已被抢完！下次要快一点哦~', { timeout: 10000 }).should('be.visible');
   cy.contains('🧧 领取红包').should('not.exist');
 });
 

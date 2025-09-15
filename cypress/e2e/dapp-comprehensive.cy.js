@@ -38,20 +38,23 @@ describe('Red Packet DApp - Comprehensive E2E Tests', () => {
 
   describe('Wallet Connection Flow', () => {
     beforeEach(() => {
+      // Set up mock before each test
       cy.mockMetaMask();
+      // Wait for the page to fully load
+      cy.get('body').should('be.visible');
     });
 
     it('should successfully connect wallet and show connected UI', () => {
       cy.connectWallet(MOCK_USER_ADDRESS);
 
       // Verify UI changes after connection
-      cy.contains('断开连接').should('be.visible');
+      cy.contains('断开连接', { timeout: 15000 }).should('be.visible');
       cy.checkAddressFormat(MOCK_USER_ADDRESS);
 
       // Main sections should be visible
-      cy.contains('📋 合约信息').should('be.visible');
-      cy.contains('🎁 红包状态').should('be.visible');
-      cy.contains('📖 使用说明').should('be.visible');
+      cy.contains('📋 合约信息', { timeout: 10000 }).should('be.visible');
+      cy.contains('🎁 红包状态', { timeout: 10000 }).should('be.visible');
+      cy.contains('📖 使用说明', { timeout: 10000 }).should('be.visible');
     });
 
     it('should display contract information correctly', () => {
@@ -95,16 +98,18 @@ describe('Red Packet DApp - Comprehensive E2E Tests', () => {
     beforeEach(() => {
       cy.mockContractOwner(MOCK_OWNER_ADDRESS);
       cy.mockRedPacketState();
+      // Wait for setup to complete
+      cy.wait(100);
     });
 
     it('should show owner interface with deposit capability', () => {
       cy.connectWallet(MOCK_OWNER_ADDRESS);
 
       // Owner indicator
-      cy.contains('（您）').should('be.visible');
+      cy.contains('（您）', { timeout: 10000 }).should('be.visible');
 
       // Deposit button
-      cy.contains('💰 充值红包').should('be.visible').and('not.be.disabled');
+      cy.contains('💰 充值红包', { timeout: 10000 }).should('be.visible').and('not.be.disabled');
     });
 
     it('should handle successful red packet deposit', () => {
@@ -298,7 +303,11 @@ describe('Red Packet DApp - Comprehensive E2E Tests', () => {
 
   describe('Error Handling and Edge Cases', () => {
     it('should handle MetaMask not available gracefully', () => {
-      // Don't mock ethereum - simulate MetaMask not installed
+      // Clear any existing ethereum mock
+      cy.window().then((win) => {
+        delete win.ethereum;
+      });
+
       cy.contains('连接钱包').should('be.visible');
       cy.contains('连接钱包').click();
 

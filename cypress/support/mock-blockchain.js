@@ -210,35 +210,107 @@ Cypress.Commands.add('setupMockBlockchain', (config = {}) => {
     // 将模拟区块链实例存储到window对象中
     win.mockBlockchain = mockChain;
 
-    // 设置MetaMask模拟
+    // Enhanced MetaMask mock with proper event handling
+    const eventHandlers = new Map();
+    
     win.ethereum = {
       isMetaMask: true,
-      request: cy.stub().as('ethereumRequest').callsFake((params) => {
-        return handleEthereumRequest(params, mockChain, contractAddress);
+      selectedAddress: null, // Start disconnected
+      chainId: '0x1', // Ethereum mainnet (app expects mainnet)
+      networkVersion: '1',
+      isConnected: () => !!win.ethereum.selectedAddress,
+      
+      // Event handling system
+      _eventHandlers: eventHandlers,
+      
+      on: cy.stub().as('ethereumOn').callsFake((eventName, handler) => {
+        if (!eventHandlers.has(eventName)) {
+          eventHandlers.set(eventName, []);
+        }
+        eventHandlers.get(eventName).push(handler);
       }),
-      on: cy.stub().as('ethereumOn'),
-      removeListener: cy.stub().as('ethereumRemoveListener'),
-      selectedAddress: accounts[0].address,
-      chainId: '0x5', // Goerli testnet
-      networkVersion: '5'
-    };
+      
+      removeListener: cy.stub().as('ethereumRemoveListener').callsFake((eventName, handler) => {
+        if (eventHandlers.has(eventName)) {
+          const handlers = eventHandlers.get(eventName);
+          const index = handlers.indexOf(handler);
+          if (index > -1) {
+            handlers.splice(index, 1);
+          }
+        }
+      }),
+      
+      // Enhanced request method with proper async behavior
+      request: cy.stub().as('ethereumRequest').callsFake(async (params) => {
+        // Add realistic delay to simulate MetaMask response time
+        await new Promise(resolve => setTimeout(resolve, 50));
+        
+        const result = await handleEthereumRequest(params, mockChain, contractAddress, win.ethereum, eventHandlers);
+        
+        // Trigger events after state changes
+        if (params.method === 'eth_requestAccounts' && result.length > 0) {
+          win.ethereum.selectedAddress = result[0];
+          setTimeout(() => {
+            triggerEvent(eventHandlers, 'accountsChanged', result);
+          }, 100);
+        }
+        
+        return result;
+      }),
+      
+      // Utility method to trigger events (for testing)
+      _triggerEvent: (eventName, ...args) => {
+        triggerEvent(eventHandlers, eventName, ...args);
+      }
+    });
+
+    console.log('Mock ethereum provider setup complete:', win.ethereum);
+
+    // Trigger initial setup events if needed
+    if (accounts.length > 0 && !win.ethereum.selectedAddress) {
+      console.log('Auto-connecting to first account:', accounts[0].address);
+      // Don't auto-connect, let the test explicitly connect
+    }
   });
 });
 
 /**
+ * Trigger MetaMask events
+ */
+function triggerEvent(eventHandlers, eventName, ...args) {
+  if (eventHandlers.has(eventName)) {
+    eventHandlers.get(eventName).forEach(handler => {
+      try {
+        handler(...args);
+      } catch (error) {
+        console.warn(`Error in ${eventName} event handler:`, error);
+      }
+    });
+  }
+}
+
+/**
  * 处理以太坊请求的核心逻辑
  */
-function handleEthereumRequest(params, mockChain, contractAddress) {
+function handleEthereumRequest(params, mockChain, contractAddress, ethereumProvider, eventHandlers) {
   switch (params.method) {
     case 'eth_requestAccounts':
+      // Return all available accounts for connection
+      const allAccounts = Array.from(mockChain.accounts.keys());
+      if (allAccounts.length > 0) {
+        ethereumProvider.selectedAddress = allAccounts[0];
+      }
+      return Promise.resolve(allAccounts);
+      
     case 'eth_accounts':
-      return Promise.resolve(Array.from(mockChain.accounts.keys()));
+      // Return connected accounts only
+      return Promise.resolve(ethereumProvider.selectedAddress ? [ethereumProvider.selectedAddress] : []);
 
     case 'eth_chainId':
-      return Promise.resolve('0x5'); // Goerli
+      return Promise.resolve('0x1'); // Mainnet
 
     case 'net_version':
-      return Promise.resolve('5');
+      return Promise.resolve('1');
 
     case 'eth_getBalance':
       const balanceAddress = params.params[0].toLowerCase();
@@ -259,9 +331,22 @@ function handleEthereumRequest(params, mockChain, contractAddress) {
           transactionHash: txHash,
           blockNumber: '0x' + tx.blockNumber.toString(16),
           status: '0x1', // 成功
-          gasUsed: '0x5208'
+          gasUsed: '0x5208',
+          logs: tx.type === 'claim' ? [{
+            topics: ['0x123456789'], // Mock event signature
+            data: '0x' + parseInt(tx.value).toString(16).padStart(64, '0') // Claimed amount
+          }] : []
         });
       }
+      return Promise.resolve(null);
+
+    case 'wallet_revokePermissions':
+      // Handle wallet disconnection
+      ethereumProvider.selectedAddress = null;
+      setTimeout(() => {
+        triggerEvent(eventHandlers, 'accountsChanged', []);
+        triggerEvent(eventHandlers, 'disconnect', { code: 4900, message: 'User disconnected' });
+      }, 50);
       return Promise.resolve(null);
 
     default:
@@ -292,17 +377,17 @@ function handleContractCall(params, mockChain, contractAddress) {
     );
   }
 
-  // hasUserClaimed(address) - 检查data长度判断是否包含地址参数
-  if (data.length > 70) {
+  // hasUserClaimed(address) or hasClaimed(address) - check if contains address parameter
+  if (data.length > 70 && (data.includes('hasClaimed') || data.length === 74)) {
     const userAddress = '0x' + data.slice(-40);
-    const hasClaimed = mockChain.hasUserClaimed(userAddress, contractAddress);
+    const hasClaimed = mockChain.hasUserClaimed(userAddress);
     return Promise.resolve(hasClaimed ? '0x0000000000000000000000000000000000000000000000000000000000000001' : '0x0000000000000000000000000000000000000000000000000000000000000000');
   }
 
-  // getUserClaimedAmount(address)
-  if (data.includes('getUserClaimedAmount')) {
+  // getUserClaimedAmount(address) or claimedAmount(address)
+  if (data.includes('getUserClaimedAmount') || data.includes('claimedAmount')) {
     const userAddress = '0x' + data.slice(-40);
-    const amount = mockChain.getUserClaimedAmount(userAddress, contractAddress);
+    const amount = mockChain.getUserClaimedAmount(userAddress);
     return Promise.resolve('0x' + parseInt(parseFloat(amount) * 1e18).toString(16).padStart(64, '0'));
   }
 

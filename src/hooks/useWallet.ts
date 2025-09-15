@@ -30,7 +30,7 @@ export const useWallet = () => {
                 const browserProvider = new BrowserProvider(window.ethereum);
 
                 setProvider(browserProvider);
-                setAccount(accounts);
+                setAccount(accounts[0]); // Set the first account as the selected account
                 setAuthorizedAccounts(accounts); // 记录已授权的账户
                 console.log(TEXT.WALLET_CONNECTED, accounts[0]);
             }
