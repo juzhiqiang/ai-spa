@@ -46,10 +46,10 @@ Cypress.Commands.add('connectWallet', (address = '0x742d35Cc6634C0532925a3b8D45c
   });
 
   // Wait for DOM to be ready
-  cy.contains('连接钱包').should('be.visible');
+  cy.contains('连接 MetaMask').should('be.visible');
 
   // Click connect button
-  cy.contains('连接钱包').click();
+  cy.contains('连接 MetaMask').click();
 
   // Wait for wallet connection to complete with proper timeout
   const formattedAddress = `${address.slice(0, 6)}...${address.slice(-4)}`;
@@ -257,7 +257,7 @@ Cypress.Commands.add('testResponsiveLayout', () => {
   viewports.forEach(viewport => {
     cy.viewport(viewport.width, viewport.height);
     cy.contains('🧧 智能合约红包系统').should('be.visible');
-    cy.contains('连接钱包').should('be.visible');
+    cy.contains('连接 MetaMask').should('be.visible');
   });
 
   // Reset to default

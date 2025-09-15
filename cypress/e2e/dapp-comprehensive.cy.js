@@ -23,7 +23,7 @@ describe('Red Packet DApp - Comprehensive E2E Tests', () => {
 
       // Call to action
       cy.contains('请先连接您的 MetaMask 钱包开始使用').should('be.visible');
-      cy.contains('连接钱包').should('be.visible').and('not.be.disabled');
+      cy.contains('连接 MetaMask').should('be.visible').and('not.be.disabled');
 
       // Footer
       cy.contains('🚀 Red Packet DApp - 基于区块链的智能红包系统').should('be.visible');
@@ -428,6 +428,7 @@ describe('Red Packet DApp - Comprehensive E2E Tests', () => {
     });
 
     it('should work correctly on mobile devices', () => {
+      cy.connectWallet(MOCK_USER_ADDRESS);
       cy.viewport(375, 667); // iPhone 6/7/8
 
       cy.contains('🧧 智能合约红包系统').should('be.visible');
