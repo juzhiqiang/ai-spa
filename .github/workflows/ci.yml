@@ -55,6 +55,15 @@ jobs:
     - name: Build project
       run: yarn client:prod
 
+    # 启动开发服务器（后台运行）
+    - name: Start development server
+      run: yarn client:server &
+
+    # 等待服务器启动
+    - name: Wait for server
+      run: |
+        timeout 60 bash -c 'until curl -f http://localhost:8080; do sleep 1; done'
+
     # 运行E2E测试（构建成功后）
     - name: Run E2E tests
       run: yarn test:e2e:headless

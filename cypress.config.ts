@@ -2,45 +2,23 @@ import { defineConfig } from "cypress";
 
 export default defineConfig({
   e2e: {
+    // 应用基础URL，指向webpack开发服务器
     baseUrl: "http://localhost:8080",
     setupNodeEvents(on) {
-      let serverProcess: any;
-
-      // 测试运行前启动开发服务器
-      on("before:run", async () => {
-        const { spawn } = await import("child_process");
-
-        return new Promise<void>((resolve) => {
-          console.log("Starting development server...");
-          // 启动webpack开发服务器
-          serverProcess = spawn("npm", ["run", "client:server"], {
-            stdio: "inherit",
-            shell: true,
-          });
-
-          // 等待服务器启动完成
-          setTimeout(() => {
-            console.log("Development server started");
-            resolve();
-          }, 10000);
-        });
-      });
-
-      // 测试运行后停止开发服务器
-      on("after:run", () => {
-        if (serverProcess) {
-          console.log("Stopping development server...");
-          serverProcess.kill();
-        }
-      });
+      // 可以在这里添加其他插件配置
     },
     // 禁用支持文件
     supportFile: false,
+    // 启用视频录制用于调试
     video: true,
     // 测试失败时截图
     screenshotOnRunFailure: true,
+    // 视窗大小设置
     viewportWidth: 1920,
     viewportHeight: 1080,
-
+    // 超时设置
+    defaultCommandTimeout: 10000,
+    requestTimeout: 10000,
+    responseTimeout: 10000,
   },
 });
