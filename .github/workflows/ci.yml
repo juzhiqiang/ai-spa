@@ -30,7 +30,7 @@ jobs:
 
     # 安装依赖
     - name: Install dependencies
-      run: yarn install --frozen-lockfile
+      run: yarn install
 
     # 代码检查
     - name: Run ESLint
@@ -80,7 +80,7 @@ jobs:
 
     # 安装依赖
     - name: Install dependencies
-      run: yarn install --frozen-lockfile
+      run: yarn install
 
     # 构建生产版本
     - name: Build for production
