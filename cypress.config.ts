@@ -3,7 +3,7 @@ import { defineConfig } from "cypress";
 export default defineConfig({
   e2e: {
     // 应用基础URL，指向webpack开发服务器
-    baseUrl: "http://localhost:8080",
+    baseUrl: "http://localhost:3000",
     setupNodeEvents(on) {
       // 可以在这里添加其他插件配置
     },
