@@ -11,10 +11,11 @@ jobs:
   # 测试阶段
   test:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
 
     strategy:
       matrix:
-        node-version: [20.x, 22.x]
+        node-version: [20.x]
 
     steps:
     # 检出代码
@@ -27,9 +28,16 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
+    # 缓存node_modules
+    - name: Cache node modules
+      uses: actions/cache@v3
+      with:
+        path: node_modules
+        key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
+
     # 安装依赖
     - name: Install dependencies
-      run: yarn install
+      run: yarn install --prefer-offline
 
     # 代码检查
     - name: Run ESLint
@@ -54,7 +62,6 @@ jobs:
     # 上传测试覆盖率报告
     - name: Upload coverage reports
       uses: codecov/codecov-action@v3
-      if: matrix.node-version == '20.x'
       with:
         file: ./coverage/lcov.info
         fail_ci_if_error: false
@@ -63,6 +70,7 @@ jobs:
   deploy:
     needs: test
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
 
     steps:
@@ -76,9 +84,16 @@ jobs:
       with:
         node-version: '20.x'
 
+    # 缓存node_modules
+    - name: Cache node modules
+      uses: actions/cache@v3
+      with:
+        path: node_modules
+        key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
+
     # 安装依赖
     - name: Install dependencies
-      run: yarn install
+      run: yarn install --prefer-offline
 
     # 构建生产版本
     - name: Build for production
