@@ -58,6 +58,8 @@ jobs:
     # 运行E2E测试（构建成功后）
     - name: Run E2E tests
       run: yarn test:e2e:headless
+      env:
+        CYPRESS_CACHE_FOLDER: ~/.cache/Cypress
 
     # 上传测试覆盖率报告
     - name: Upload coverage reports
