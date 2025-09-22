@@ -2,6 +2,7 @@ import { Octokit } from '@octokit/rest';
 import { MastraClient } from '@mastra/client-js';
 import fs from 'fs';
 
+
 // 初始化GitHub客户端，用于获取PR信息和发表评论
 const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
 
@@ -26,12 +27,23 @@ const { data: files } = await octokit.pulls.listFiles({
 
 // 将所有文件的差异内容合并为一个字符串
 const diffs = files.map(f => `File: ${f.filename}\n${f.patch || ''}`).join('\n\n');
-
 console.log(`发现 ${files.length} 个修改的文件`);
 
 try {
+    // 首先列出所有可用的agents
+    console.log('检查可用的agents...');
+    const agents = await mastraClient.getAgents();
+    console.log('可用的agents:', Object.keys(agents));
+
+    // 检查codeReviewAgent是否存在
+    if (!agents.codeReviewAgent) {
+        throw new Error(`codeReviewAgent 不存在。可用的agents: ${Object.keys(agents).join(', ')}`);
+    }
+
     // 获取codeReviewAgent实例
     const agent = mastraClient.getAgent('codeReviewAgent');
+
+    console.log(agent,'test')
 
     // 调用agent进行代码审查
     const review = await agent.generate({
