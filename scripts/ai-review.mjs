@@ -61,6 +61,9 @@ try {
     });
 
     console.log("✅ AI review 已评论到 PR");
+
+    // 检查是否应该自动合并PR
+    await attemptAutoMerge(prNumber, owner, repo, reviewContent);
 } catch (error) {
     console.error('AI 审查失败:', error.message);
 
@@ -71,4 +74,37 @@ try {
         issue_number: prNumber,
         body: `🤖 **AI Code Review**\n\n❌ AI 审查服务暂时不可用，请稍后重试。\n\n错误信息: ${error.message}`,
     });
+}
+
+// 自动合并PR的函数
+async function attemptAutoMerge(prNumber, owner, repo, reviewContent) {
+    try {
+        // 检查总体评分是否达到6/10以上
+        const scoreMatch = reviewContent.match(/总体评分[：:]\s*(\d+)\/10/);
+        if (!scoreMatch) {
+            console.log('未找到总体评分，跳过自动合并');
+            return;
+        }
+
+        const score = parseInt(scoreMatch[1]);
+        if (score < 6) {
+            console.log(`总体评分 ${score}/10 低于6分，跳过自动合并`);
+            return;
+        }
+
+        // 执行自动合并
+        await octokit.pulls.merge({
+            owner,
+            repo,
+            pull_number: prNumber,
+            commit_title: `Auto-merge: 评分 ${score}/10`,
+            commit_message: `AI审查评分 ${score}/10，自动合并`,
+            merge_method: 'squash'
+        });
+
+        console.log(`✅ PR #${prNumber} 已自动合并 (评分: ${score}/10)`);
+
+    } catch (error) {
+        console.error('自动合并失败:', error.message);
+    }
 }
