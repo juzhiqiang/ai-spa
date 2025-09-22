@@ -8,7 +8,7 @@ const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
 
 // 初始化Mastra客户端，连接到部署的AI代码审查服务
 const mastraClient = new MastraClient({
-    baseUrl: 'https://reviewcode.juzhiqiang.shop/',
+    baseUrl: 'https://reviewcode.juzhiqiang.shop',
 });
 
 // 从GitHub Actions环境变量中读取事件信息
@@ -46,7 +46,17 @@ try {
 
     console.log(agent,'test')
 
+    // 先检查agent的详细信息
+    console.log('获取agent详细信息...');
+    try {
+        const agentDetails = await agent.details();
+        console.log('Agent详细信息:', agentDetails);
+    } catch (detailError) {
+        console.log('获取agent详细信息失败:', detailError.message);
+    }
+
     // 调用agent进行代码审查
+    console.log('开始调用agent generate...');
     const review = await agent.generate({
         messages: [
             {
