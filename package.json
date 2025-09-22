@@ -3,7 +3,6 @@
     "version": "1.0.0",
     "description": "",
     "main": "webpack.config.js",
-    "type": "module",
     "scripts": {
         "client:dev": "scripty",
         "client:server": "webpack serve --mode development",
@@ -14,7 +13,7 @@
         "test:e2e:headless": "cypress run",
         "test:unit": "scripty",
         "test": "jest --collectCoverage --reporters default jest-stare",
-        "review":"node scripts/ai-review.js",
+        "review":"node scripts/ai-review.mjs",
         "lint:fix": "tsc --noEmit && eslint ./src --ext .ts,.tsx,.js --fix && eslint ./scripts --ext .ts,.tsx,.js --fix",
         "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
         "lint:staged": "npx @biomejs/biome check --write ./src",
