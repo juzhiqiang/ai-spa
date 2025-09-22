@@ -81,7 +81,7 @@ jobs:
   ai_review:
     name: AI Code Review
     needs: [test]
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     permissions:
       contents: read
