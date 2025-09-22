@@ -2,44 +2,67 @@ import { Octokit } from '@octokit/rest';
 import { MastraClient } from '@mastra/client-js';
 import fs from 'fs';
 
-// GitHub & Mastra 客户端
+// 初始化GitHub客户端，用于获取PR信息和发表评论
 const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
+
+// 初始化Mastra客户端，连接到部署的AI代码审查服务
 const mastraClient = new MastraClient({
     baseUrl: 'https://reviewcode.juzhiqiang.shop/',
 });
 
-// 获取 PR 信息1
+// 从GitHub Actions环境变量中读取事件信息
 const event = JSON.parse(fs.readFileSync(process.env.GITHUB_EVENT_PATH, 'utf8'));
 const prNumber = event.pull_request.number;
 const [owner, repo] = process.env.GITHUB_REPOSITORY.split('/');
 
-// 获取 PR 的 diff（patch）
+console.log(`开始审查 PR #${prNumber} in ${owner}/${repo}`);
+
+// 获取PR中所有修改的文件及其差异内容
 const { data: files } = await octokit.pulls.listFiles({
     owner,
     repo,
     pull_number: prNumber,
 });
 
+// 将所有文件的差异内容合并为一个字符串
 const diffs = files.map(f => `File: ${f.filename}\n${f.patch || ''}`).join('\n\n');
 
-// 调用部署的 codeReviewAgent
-const review = await mastraClient.agents.run({
-    agentId: 'codeReviewAgent',
-    input: {
-        diffs: diffs,
-        instruction: '请帮我审查以下 PR 改动并给出建议',
-    },
-});
+console.log(`发现 ${files.length} 个修改的文件`);
 
-// 提取审查结果
-const reviewContent = review.text || review.output || '（未生成审查内容）';
-console.log(reviewContent);
-// // 回帖到 PR
-// await octokit.issues.createComment({
-//     owner,
-//     repo,
-//     issue_number: prNumber,
-//     body: `🤖 **AI Code Review**\n\n${reviewContent}`,
-// });
+try {
+    // 获取codeReviewAgent实例
+    const agent = mastraClient.getAgent('codeReviewAgent');
 
-// console.log("✅ AI review 已评论到 PR");
+    // 调用agent进行代码审查
+    const review = await agent.run({
+        input: {
+            diffs: diffs,
+            instruction: '请帮我审查以下 PR 改动并给出建议',
+        },
+    });
+
+    // 提取审查结果
+    const reviewContent = review.text || review.output || review.result || '（未生成审查内容）';
+    console.log('AI 审查结果:');
+    console.log(reviewContent);
+
+    // 将审查结果作为评论发布到PR
+    await octokit.issues.createComment({
+        owner,
+        repo,
+        issue_number: prNumber,
+        body: `🤖 **AI Code Review**\n\n${reviewContent}`,
+    });
+
+    console.log("✅ AI review 已评论到 PR");
+} catch (error) {
+    console.error('AI 审查失败:', error.message);
+
+    // 即使AI审查失败，也发布一个通知评论
+    await octokit.issues.createComment({
+        owner,
+        repo,
+        issue_number: prNumber,
+        body: `🤖 **AI Code Review**\n\n❌ AI 审查服务暂时不可用，请稍后重试。\n\n错误信息: ${error.message}`,
+    });
+}
