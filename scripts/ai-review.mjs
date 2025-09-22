@@ -45,7 +45,6 @@ try {
     }
 
     const review = await response.json();
-    console.log('API响应:', review);
 
     // 提取审查结果
     const reviewContent = review.text || review.content || review.response?.text || review.messages?.[0]?.content || '（未生成审查内容）';
@@ -80,7 +79,7 @@ try {
 async function attemptAutoMerge(prNumber, owner, repo, reviewContent) {
     try {
         // 检查总体评分是否达到6/10以上
-        const scoreMatch = reviewContent.match(/总体评分[：:]\s*(\d+)\/10/);
+        const scoreMatch = reviewContent.match(/\*\*总体评分\*\*[：:]\s*(\d+)\/10/);
         if (!scoreMatch) {
             console.log('未找到总体评分，跳过自动合并');
             return;
