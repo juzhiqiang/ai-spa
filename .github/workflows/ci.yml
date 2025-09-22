@@ -1,9 +1,7 @@
 name: CI/CD Pipeline
 
-# 触发条件：推送到main分支或创建Pull Request
+# 触发条件：创建Pull Request到main分支
 on:
-  push:
-    branches: [ main ]
   pull_request:
     branches: [ main ]
 
@@ -84,7 +82,7 @@ jobs:
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
       pull-requests: write
     steps:
       - uses: actions/checkout@v4
