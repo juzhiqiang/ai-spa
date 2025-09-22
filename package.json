@@ -29,7 +29,7 @@
         "@mastra/client-js": "^0.13.1",
         "@octokit/rest": "^22.0.0",
         "@typescript-eslint/eslint-plugin": "8.43.0",
-        "@typescript-eslint/parser": "7.0.0",
+        "@typescript-eslint/parser": "8.43.0",
         "@welldone-software/why-did-you-render": "^10.0.1",
         "backstopjs": "^6.3.25",
         "eslint-config-airbnb-typescript": "^18.0.0",
