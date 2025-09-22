@@ -1,15 +1,8 @@
 import { Octokit } from '@octokit/rest';
-import { MastraClient } from '@mastra/client-js';
 import fs from 'fs';
-
 
 // 初始化GitHub客户端，用于获取PR信息和发表评论
 const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
-
-// 初始化Mastra客户端，连接到部署的AI代码审查服务
-const mastraClient = new MastraClient({
-    baseUrl: 'https://reviewcode.juzhiqiang.shop',
-});
 
 // 从GitHub Actions环境变量中读取事件信息
 const event = JSON.parse(fs.readFileSync(process.env.GITHUB_EVENT_PATH, 'utf8'));
@@ -30,29 +23,32 @@ const diffs = files.map(f => `File: ${f.filename}\n${f.patch || ''}`).join('\n\n
 console.log(`发现 ${files.length} 个修改的文件`);
 
 try {
-    // 首先列出所有可用的agents
-    const agents = await mastraClient.getAgents();
-    // 检查codeReviewAgent是否存在
-    if (!agents.codeReviewAgent) {
-        throw new Error(`codeReviewAgent 不存在。可用的agents: ${Object.keys(agents).join(', ')}`);
-    }
-
-    // 获取codeReviewAgent实例
-    const agent = mastraClient.getAgent('codeReviewAgent');
-
-    // 调用agent进行代码审查
-    console.log('开始调用agent generate...');
-    const review = await agent.generate({
-        messages: [
-            {
-                role: 'user',
-                content: `请帮我审查以下 PR 改动并给出建议：\n\n${diffs}`
-            }
-        ]
+    // 直接调用Mastra API进行代码审查
+    console.log('开始调用codeReviewAgent...');
+    const response = await fetch('https://reviewcode.juzhiqiang.shop/api/agents/codeReviewAgent/generate-legacy', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            messages: [
+                {
+                    role: 'user',
+                    content: `请帮我审查以下 PR 改动并给出建议：\n\n${diffs}`
+                }
+            ]
+        })
     });
 
+    if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status} - ${response.statusText}`);
+    }
+
+    const review = await response.json();
+    console.log('API响应:', review);
+
     // 提取审查结果
-    const reviewContent = review.text || review.content || review.response?.text || '（未生成审查内容）';
+    const reviewContent = review.text || review.content || review.response?.text || review.messages?.[0]?.content || '（未生成审查内容）';
     console.log('AI 审查结果:');
     console.log(reviewContent);
 
