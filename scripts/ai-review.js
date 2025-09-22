@@ -8,7 +8,7 @@ const mastraClient = new MastraClient({
     baseUrl: "https://reviewcode.juzhiqiang.shop/",
 });
 
-// 获取 PR 信息
+// 获取 PR 信息1
 const event = JSON.parse(fs.readFileSync(process.env.GITHUB_EVENT_PATH, "utf8"));
 const prNumber = event.pull_request.number;
 const [owner, repo] = process.env.GITHUB_REPOSITORY.split("/");
