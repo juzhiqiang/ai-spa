@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "",
     "main": "webpack.config.js",
+    "type": "module",
     "scripts": {
         "client:dev": "scripty",
         "client:server": "webpack serve --mode development",
