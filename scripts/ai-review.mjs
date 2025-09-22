@@ -27,15 +27,11 @@ const { data: files } = await octokit.pulls.listFiles({
 
 // 将所有文件的差异内容合并为一个字符串
 const diffs = files.map(f => `File: ${f.filename}\n${f.patch || ''}`).join('\n\n');
-console.log(diffs);
 console.log(`发现 ${files.length} 个修改的文件`);
 
 try {
     // 首先列出所有可用的agents
-    console.log('检查可用的agents...');
     const agents = await mastraClient.getAgents();
-    console.log('可用的agents:', Object.keys(agents));
-
     // 检查codeReviewAgent是否存在
     if (!agents.codeReviewAgent) {
         throw new Error(`codeReviewAgent 不存在。可用的agents: ${Object.keys(agents).join(', ')}`);
@@ -43,17 +39,6 @@ try {
 
     // 获取codeReviewAgent实例
     const agent = mastraClient.getAgent('codeReviewAgent');
-
-    console.log(agent,'test')
-
-    // 先检查agent的详细信息
-    console.log('获取agent详细信息...');
-    try {
-        const agentDetails = await agent.details();
-        console.log('Agent详细信息:', agentDetails);
-    } catch (detailError) {
-        console.log('获取agent详细信息失败:', detailError.message);
-    }
 
     // 调用agent进行代码审查
     console.log('开始调用agent generate...');
