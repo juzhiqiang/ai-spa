@@ -6,7 +6,7 @@ const { resolve, join } = require('path');
 module.exports = {
     output: {
         path: join(__dirname, '../dist'),
-        publicPath: '/',
+        publicPath: './',
         //如果是通过loader 编译的 放到scripts文件夹里 filename
         filename: 'scripts/[name].[contenthash:5].bundle.js',
         //如果是通过'asset/resource' 编译的
