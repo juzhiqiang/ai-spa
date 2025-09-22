@@ -34,15 +34,17 @@ try {
     const agent = mastraClient.getAgent('codeReviewAgent');
 
     // 调用agent进行代码审查
-    const review = await agent.run({
-        input: {
-            diffs: diffs,
-            instruction: '请帮我审查以下 PR 改动并给出建议',
-        },
+    const review = await agent.generate({
+        messages: [
+            {
+                role: 'user',
+                content: `请帮我审查以下 PR 改动并给出建议：\n\n${diffs}`
+            }
+        ]
     });
 
     // 提取审查结果
-    const reviewContent = review.text || review.output || review.result || '（未生成审查内容）';
+    const reviewContent = review.text || review.content || review.response?.text || '（未生成审查内容）';
     console.log('AI 审查结果:');
     console.log(reviewContent);
 
