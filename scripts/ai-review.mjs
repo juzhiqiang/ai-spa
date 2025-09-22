@@ -25,7 +25,7 @@ console.log(`发现 ${files.length} 个修改的文件`);
 try {
     // 直接调用Mastra API进行代码审查
     console.log('开始调用codeReviewAgent...');
-    const response = await fetch('https://reviewcode.juzhiqiang.shop/api/agents/codeReviewAgent/generate-legacy', {
+    const response = await fetch('https://reviewcode.juzhiqiang.shop/api/agents/codeReviewAgent/generate', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
