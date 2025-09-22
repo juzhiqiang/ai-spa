@@ -64,7 +64,7 @@ try {
     // 检查是否应该自动合并PR
     await attemptAutoMerge(prNumber, owner, repo, reviewContent);
 } catch (error) {
-    console.error('AI 审查失败:', error.message);
+    console.error('AI-审查失败:', error.message);
 
     // 即使AI审查失败，也发布一个通知评论
     await octokit.issues.createComment({
