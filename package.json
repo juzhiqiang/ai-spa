@@ -14,7 +14,7 @@
         "test:unit": "scripty",
         "test": "jest --collectCoverage --reporters default jest-stare",
         "review":"node scripts/ai-review.js",
-        "lint:fix": "tsc --noEmit && eslint ./src --ext .ts,.tsx,.js --fix",
+        "lint:fix": "tsc --noEmit && eslint ./src --ext .ts,.tsx,.js --fix && eslint ./scripts --ext .ts,.tsx,.js --fix",
         "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
         "lint:staged": "npx @biomejs/biome check --write ./src",
         "prepare": "husky"
