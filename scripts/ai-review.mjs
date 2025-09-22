@@ -27,6 +27,7 @@ const { data: files } = await octokit.pulls.listFiles({
 
 // 将所有文件的差异内容合并为一个字符串
 const diffs = files.map(f => `File: ${f.filename}\n${f.patch || ''}`).join('\n\n');
+console.log(diffs);
 console.log(`发现 ${files.length} 个修改的文件`);
 
 try {
