@@ -13,6 +13,7 @@
         "test:e2e:headless": "cypress run",
         "test:unit": "scripty",
         "test": "jest --collectCoverage --reporters default jest-stare",
+        "review":"node scripts/ai-review.js",
         "lint:fix": "tsc --noEmit && eslint ./src --ext .ts,.tsx,.js --fix",
         "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
         "lint:staged": "npx @biomejs/biome check --write ./src",
@@ -25,6 +26,8 @@
         "resultDir": "docs/jest-stare"
     },
     "dependencies": {
+        "@mastra/client-js": "^0.13.1",
+        "@octokit/rest": "^22.0.0",
         "@typescript-eslint/eslint-plugin": "^8.43.0",
         "@typescript-eslint/parser": "^7.0.0",
         "@welldone-software/why-did-you-render": "^10.0.1",

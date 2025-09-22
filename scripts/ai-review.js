@@ -1,10 +1,12 @@
 import { Octokit } from "@octokit/rest";
-import OpenAI from "openai";
+import { MastraClient } from "@mastra/client-js";
 import fs from "fs";
 
-// GitHub & OpenAI 客户端
+// GitHub & Mastra 客户端
 const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
-const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+const mastraClient = new MastraClient({
+    baseUrl: "https://reviewcode.juzhiqiang.shop/",
+});
 
 // 获取 PR 信息
 const event = JSON.parse(fs.readFileSync(process.env.GITHUB_EVENT_PATH, "utf8"));
@@ -22,24 +24,24 @@ const diffs = files
     .map(f => `File: ${f.filename}\n${f.patch || ""}`)
     .join("\n\n");
 
-// 调 OpenAI 生成审查意见
-const resp = await client.responses.create({
-    model: "gpt-4.1-mini",
-    input: [
-        { role: "system", content: "你是一个专业的前端代码审查助手。" },
-        { role: "user", content: `请帮我审查以下 PR 改动并给出建议：\n\n${diffs}` },
-    ],
+// 调用部署的 codeReviewAgent
+const review = await mastraClient.agents.run({
+    agentId: "codeReviewAgent",
+    input: {
+        diffs: diffs,
+        instruction: "请帮我审查以下 PR 改动并给出建议"
+    }
 });
 
-// 提取文本
-const review = resp.output_text || "（未生成内容）";
+// 提取审查结果
+const reviewContent = review.text || review.output || "（未生成审查内容）";
+console.log(reviewContent);
+// // 回帖到 PR
+// await octokit.issues.createComment({
+//     owner,
+//     repo,
+//     issue_number: prNumber,
+//     body: `🤖 **AI Code Review**\n\n${reviewContent}`,
+// });
 
-// 回帖到 PR
-await octokit.issues.createComment({
-    owner,
-    repo,
-    issue_number: prNumber,
-    body: `🤖 **AI Code Review**\n\n${review}`,
-});
-
-console.log("✅ AI review 已评论到 PR");
+// console.log("✅ AI review 已评论到 PR");

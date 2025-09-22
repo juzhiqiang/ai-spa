@@ -77,23 +77,24 @@ jobs:
         file: ./coverage/lcov.info
         fail_ci_if_error: false
 
-    # AI代码审查
-    - name: AI Code Review
-      if: success()
-      run: |
-        echo "🤖 Starting AI Code Review..."
-        # 调用AI审查agent
-        if [ -f "scripts/ai-review.js" ]; then
-          node scripts/ai-review.js
-        else
-          echo "⚠️ AI review agent not found, skipping review"
-        fi
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-        GITHUB_REPOSITORY: ${{ github.repository }}
-        GITHUB_REF_NAME: ${{ github.ref_name }}
-        GITHUB_SHA: ${{ github.sha }}
+  # ai审查
+  ai_review:
+    name: AICodeReview
+    needs: [test]
+    if: ${{ github.event_name == 'pull_request' }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write   
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: [20.x]
+      - run: yarn add @octokit/rest @mastra/client-js
+      - run: yarn run review
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   # 部署阶段（仅在测试通过后执行）
   deploy:
